@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cowsay
+namespace CowsayLibrary
 {
     public class CowFace
     {
-        public string Eyes { get; private set; }
-        public string Tongue { get; private set; }
+        public string Eyes { get; set; }
+        public string Tongue { get; set; }
 
         public CowFace() { Eyes = null; Tongue = null; }
 

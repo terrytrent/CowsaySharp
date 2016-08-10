@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cowsayTests
+namespace Cowsay.Common
 {
-    class cowsayTests
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }

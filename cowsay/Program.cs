@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 
 
-namespace cowsay
+namespace CowsayLibrary
 {
     class program
     {

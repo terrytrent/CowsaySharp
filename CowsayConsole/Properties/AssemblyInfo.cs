@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CowsayLibrary")]
+[assembly: AssemblyTitle("CowsayConsole")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CowsayLibrary")]
+[assembly: AssemblyProduct("CowsayConsole")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ecd6463c-4829-4271-b8c0-8f72f868e96c")]
+[assembly: Guid("bc1058d1-4a6a-499f-9fe8-b5c9cf47976a")]
 
 // Version information for an assembly consists of the following four values:
 //

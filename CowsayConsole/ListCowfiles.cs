@@ -4,18 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Cowsay.Common;
 
-namespace cowsay
+namespace CowsayConsole
 {
-    class ListCowfiles
+    static class ListCowfiles
     {
         const string cowSearchPattern = "*.cow";
         const string cowsFolder = "cows";
-        public string cowFilesDirectory { get; private set; }
+        static private string cowFilesDirectory { get; set; }
 
-        public ListCowfiles(string directory)
+        static public void ShowCowfiles(string directory)
         {
             cowFilesDirectory = $"{directory}\\{cowsFolder}";
+
+            if(!validateDirectory.validate(cowFilesDirectory))
+            {
+                throw new ArgumentException("Cow Files Path is not valid or not accessible", cowFilesDirectory);
+            }
 
             string[] cowfiles = Directory.GetFiles(cowFilesDirectory, cowSearchPattern);
 

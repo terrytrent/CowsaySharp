@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace cowsay
+namespace CowsayLibrary
 {
-    static class GetCow
+    static public class GetCow
     {
         static private StringBuilder cow;
 
