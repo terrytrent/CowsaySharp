@@ -30,7 +30,7 @@ namespace cowsay
             {
                 maxLineLength = 40;
             }
-            else if(maxLineLength > 78 || maxLineLength < 10)
+            else if(maxLineLength > 76 || maxLineLength < 10)
             {
                 throw new ArgumentOutOfRangeException(nameof(maxLineLength), "Cannot specify a size smaller than 10 characters or larger than 78 characters");
             }
@@ -89,7 +89,7 @@ namespace cowsay
                 message = $"{message}\r\n{line}";
             }
 
-            return $" {topBubbleLine} \r\n{message.Trim()}\r\n {bottomBubbleLine}";
+            return $" {topBubbleLine} {Environment.NewLine}{message.Trim()}\r\n {bottomBubbleLine}";
         }
 
         List<string> SplitToLinesAsList(string text, char[] splitOnCharacters, int maxStringLength)

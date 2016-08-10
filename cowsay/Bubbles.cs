@@ -14,18 +14,6 @@ namespace cowsay
             say
         }
 
-        private bubbleType type;
-        private string upLeft;
-        private string upRight;
-        private string downLeft;
-        private string downRight;
-        private string left;
-        private string right;
-        private string smallLeft;
-        private string smallRight;
-        private string smallBubble;
-        private string largeBubble;
-
         public string UpLeft { get; private set; }
         public string UpRight { get; private set; }
         public string DownLeft { get; private set; }
@@ -35,8 +23,7 @@ namespace cowsay
         public string SmallLeft { get; private set; }
         public string SmallRight { get; private set; }
         public bubbleType Type { get; private set; }
-        public string SmallBubble { get; private set; }
-        public string LargeBubble { get; private set; }
+        public string Bubble { get; private set; }
 
         public Bubbles() { }
 
@@ -46,7 +33,7 @@ namespace cowsay
             if (Type == bubbleType.say)
             {
                 UpLeft = DownRight = "/";
-                UpRight = DownLeft = SmallBubble = LargeBubble = "\\";
+                UpRight = DownLeft = Bubble = "\\";
                 Left = Right = "|";
                 SmallLeft = "<";
                 SmallRight = ">";
@@ -55,8 +42,7 @@ namespace cowsay
             {
                 UpLeft = DownLeft = Left = SmallLeft = "(";
                 UpRight = DownRight = Right = SmallRight = ")";
-                SmallBubble = "o";
-                LargeBubble = "O";
+                Bubble = "o";
             }
         }
 
