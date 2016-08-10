@@ -9,13 +9,22 @@ namespace cowsay
     public class SpeechBubble
     {
         
-        public SpeechBubble(string message) : this(message, null)
+        public SpeechBubble(string message) : this(message, false, null)
         {
         }
 
-        public SpeechBubble(string message, int? maxLineLength)
+        public SpeechBubble(string message, bool think, int? maxLineLength)
         {
             char[] splitChar = { ' ' };
+            Bubbles bubbles = new Bubbles();
+            if(think)
+            {
+                bubbles.setBubbles(Bubbles.bubbleType.think);
+            }
+            else
+            {
+                bubbles.setBubbles(Bubbles.bubbleType.say);
+            }
 
             if (!maxLineLength.HasValue)
             {
@@ -30,11 +39,11 @@ namespace cowsay
 
             if (message.Length > maxLineLength)
             {
-                message = createLargeWordBubble(messageAsList);
+                message = createLargeWordBubble(messageAsList, bubbles);
             }
             else
             {
-                message = createSmallWordBubble(message);
+                message = createSmallWordBubble(message, bubbles);
             }
             Console.WriteLine(message);
         }
@@ -44,17 +53,17 @@ namespace cowsay
             return new string(character, numberOfUnderscores);
         }
 
-        string createSmallWordBubble(string message)
+        string createSmallWordBubble(string message, Bubbles bubbles)
         {
             int lengthOfMessage = message.Length;
             int lengthOfTopAndBottomLinesInBubble = lengthOfMessage + 2;
             string topBubbleLine = repeatCharacter('_', lengthOfTopAndBottomLinesInBubble);
             string bottomBubbleLine = repeatCharacter('-', lengthOfTopAndBottomLinesInBubble);
 
-            return $" {topBubbleLine} \r\n< {message.Trim()} >\r\n {bottomBubbleLine}";
+            return $" {topBubbleLine} \r\n{bubbles.SmallLeft} {message.Trim()} {bubbles.SmallRight}\r\n {bottomBubbleLine}";
         }
 
-        string createLargeWordBubble(List<string> list)
+        string createLargeWordBubble(List<string> list, Bubbles bubbles)
         {
             string message = "";
 
@@ -65,14 +74,14 @@ namespace cowsay
             string firstLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[0].Length);
             string lastLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[list.Count - 1].Length);
 
-            list[0] = $"/ {list[0]}{firstLineInMessageSpaces}\\";
-            list[list.Count - 1] = $"\\ {list[list.Count - 1]}{lastLineInMessageSpaces}/";
+            list[0] = $"{bubbles.UpLeft} {list[0]}{firstLineInMessageSpaces}{bubbles.UpRight}";
+            list[list.Count - 1] = $"{bubbles.DownLeft} {list[list.Count - 1]}{lastLineInMessageSpaces}{bubbles.DownRight}";
             for (int i = 1; i < list.Count() - 1; i++)
             {
                 int numberofspaces = longestLineInList - list[i].Length;
                 string spacesInLine = repeatCharacter(' ', numberofspaces + 1);
 
-                list[i] = $"| {list[i]}{spacesInLine}|";
+                list[i] = $"{bubbles.Left} {list[i]}{spacesInLine}{bubbles.Right}";
             }
 
             foreach (string line in list)

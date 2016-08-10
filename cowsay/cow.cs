@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cowsay
 {
-    class cow
+    class Cow
     {
         private string eyes;
         private string tongue;
@@ -51,35 +51,49 @@ namespace cowsay
 
                     if (tongueLength != 2)
                     {
-                        tongue = $"a {value}";
+                        tongue = $" {value}";
+                    }
+
+                    if (tongueLength == 2)
+                    {
+                        tongue = value;
                     }
                 }
-                tongue = value; }
+            }
         }
 
-        public cow() : this(null, null)
+        public Cow() : this(null, null, false)
         {
 
         }
 
-        public cow(string cowEyes, string cowTongue)
+        public Cow(string cowEyes, string cowTongue, bool think)
         {
-            
-            
-
-            if (Eyes == null)
-                cowEyes = "oo";
-            if (Tongue == null)
-                cowTongue = "  ";
-                
             Eyes = cowEyes;
             Tongue = cowTongue;
 
-            CowAscii = $@"         \   ^__^ 
-          \  ({Eyes})\_______
+            Bubbles bubbles = new Bubbles();
+            if (think)
+            {
+                bubbles.setBubbles(Bubbles.bubbleType.think);
+            }
+            else
+            {
+                bubbles.setBubbles(Bubbles.bubbleType.say);
+            }
+
+            if (Eyes == null)
+                Eyes = "oo";
+            if (Tongue == null)
+                Tongue = "  ";
+                
+
+            CowAscii = $@"         {bubbles.LargeBubble}   ^__^ 
+          {bubbles.SmallBubble}  ({eyes})\_______
              (__)\       )\/\
               {Tongue} ||----w |
                  ||     ||";
+            Console.WriteLine(CowAscii);
         }
 
         public void showCow()
