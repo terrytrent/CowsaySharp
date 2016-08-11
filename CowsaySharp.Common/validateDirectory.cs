@@ -7,7 +7,7 @@ using System.IO;
 
 namespace CowsaySharp.Common
 {
-    static public class validateDirectory
+    static public class ValidateDirectory
     {
         static public bool validate(string directory)
         {

@@ -14,7 +14,7 @@ namespace CowsaySharp.Say
             strAppDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
             string strAppDirParsed = strAppDir.Substring(strAppDir.IndexOf("C:\\"), strAppDir.Length - 6);
 
-            switchesTest.processSwitches(args, strAppDirParsed, think);
+            Switches.processSwitches(args, strAppDirParsed, think);
          }
     }
 }

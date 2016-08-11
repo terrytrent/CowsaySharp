@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 namespace CowsaySharp.Common
 {
-    static public class validateFile
+    static public class ValidateFile
     {
         static public bool validate(string file)
         {

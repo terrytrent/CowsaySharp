@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace CowsaySharp.ConsoleLibrary
 {
-    static class help
+    static class Help
     {
         static public void DisplayHelp()
         {

@@ -18,7 +18,7 @@ namespace CowsaySharp.ConsoleLibrary
         {
             cowFilesDirectory = $"{directory}\\{cowsFolder}";
 
-            if(!validateDirectory.validate(cowFilesDirectory))
+            if(!ValidateDirectory.validate(cowFilesDirectory))
             {
                 throw new ArgumentException("Cow Files Path is not valid or not accessible", cowFilesDirectory);
             }

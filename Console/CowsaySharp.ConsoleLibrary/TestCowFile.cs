@@ -29,7 +29,7 @@ namespace CowsaySharp.ConsoleLibrary
                 else
                     directory = cowSpecified.Substring(0, cowSpecified.LastIndexOf('\\'));
 
-                if (!validateDirectory.validate(directory))
+                if (!ValidateDirectory.validate(directory))
                 {
                     Console.WriteLine($"The directory you specified is either invalid or cannot be accessed:\n{directory}");
                     breakOut = true;
@@ -54,7 +54,7 @@ namespace CowsaySharp.ConsoleLibrary
                 else
                     cowSpecified = $"{cowFileLocation}\\{cowSpecified}";
             }
-            if (!breakOut && !validateFile.validate(cowSpecified))
+            if (!breakOut && !ValidateFile.validate(cowSpecified))
             {
                 Console.WriteLine($"The Cow File you specified does not exist or cannot be accessed:\n{cowSpecified}");
                 breakOut = true;
