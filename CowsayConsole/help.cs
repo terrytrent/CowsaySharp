@@ -19,7 +19,7 @@ namespace CowsayConsole
     [cowsay](https://github.com/schacon/cowsay)
 
 Usage: cowsay [-bdgpstwy] [-h] [-e eyes] [-f cowfile] 
-          [-l] [-T tongue] [-W wrapcolumn] [message]";
+          [-l] [-L] [-T tongue] [-W wrapcolumn] [message]";
 
           Console.WriteLine(help);
 

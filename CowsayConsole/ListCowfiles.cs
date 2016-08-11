@@ -14,7 +14,7 @@ namespace CowsayConsole
         const string cowsFolder = "cows";
         static private string cowFilesDirectory { get; set; }
 
-        static public void ShowCowfiles(string directory)
+        static public void ShowCowfiles(string directory, bool list)
         {
             cowFilesDirectory = $"{directory}\\{cowsFolder}";
 
@@ -25,14 +25,36 @@ namespace CowsayConsole
 
             string[] cowfiles = Directory.GetFiles(cowFilesDirectory, cowSearchPattern);
 
-            Console.WriteLine($"Cow files in {cowFilesDirectory}\r\n");
+            Console.WriteLine($"Cow files in {cowFilesDirectory}:");
 
+            if (list)
+                listInList(cowfiles);
+            else if (!list)
+                listInBunch(cowfiles);
+        }
 
+        static private void listInList(string[] cowfiles)
+        {
             foreach (string file in cowfiles)
             {
                 string fileName = Path.GetFileName(file);
-                Console.WriteLine($"    {fileName}");
+                Console.WriteLine($"    {fileName.Remove(fileName.IndexOf(".cow"),4)}");
             }
         }
+
+        static private void listInBunch(string[] cowfiles)
+        {
+            StringBuilder bunchBuilder = new StringBuilder();
+            foreach (string file in cowfiles)
+            {
+                string fileName = Path.GetFileName(file);
+                bunchBuilder.Append($"{fileName.Remove(fileName.IndexOf(".cow"), 4)} ");
+            }
+
+            string bunch = bunchBuilder.ToString();
+
+            Console.WriteLine(bunch.Trim());
+        }
+
     }
 }

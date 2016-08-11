@@ -80,7 +80,7 @@ namespace CowsayConsole
 
                         break;
                     case "-l":
-                        ListCowfiles.ShowCowfiles("dir");
+                        ListCowfiles.ShowCowfiles("dir",false);
                         breakOut = true;
                         break;
                     case "-T":

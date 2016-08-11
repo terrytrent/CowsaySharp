@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CowsayLibrary
 {
-    class CowFaces
+    public static class CowFaces
     {
         public enum cowFaces
         {
@@ -22,15 +22,15 @@ namespace CowsayLibrary
         }
 
         static public Dictionary<cowFaces, CowFace> faces { get; private set; }
-        private CowFace defaultFace { get; set; }
-        private CowFace borg { get; set; }
-        private CowFace dead { get; set; }
-        private CowFace greedy { get; set; }
-        private CowFace paranoid { get; set; }
-        private CowFace stoned { get; set; }
-        private CowFace tired { get; set; }
-        private CowFace wired { get; set; }
-        private CowFace young { get; set; }
+        static private CowFace defaultFace { get; set; }
+        static private CowFace borg { get; set; }
+        static private CowFace dead { get; set; }
+        static private CowFace greedy { get; set; }
+        static private CowFace paranoid { get; set; }
+        static private CowFace stoned { get; set; }
+        static private CowFace tired { get; set; }
+        static private CowFace wired { get; set; }
+        static private CowFace young { get; set; }
 
         static public CowFace getCowFace(cowFaces face)
         {

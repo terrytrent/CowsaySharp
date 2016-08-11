@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-
 namespace Cowsay.Common
 {
-    static public class validateDirectory
+    static public class validateFile
     {
-        static public bool validate(string directory)
+        static public bool validate(string file)
         {
             try
             {
-                var directoryAccess = Directory.GetAccessControl(directory);
+                var fileAccess = File.GetAccessControl(file);
                 return true;
             }
             catch
