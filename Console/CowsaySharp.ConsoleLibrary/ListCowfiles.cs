@@ -27,21 +27,9 @@ namespace CowsaySharp.ConsoleLibrary
             Console.WriteLine($"Cow files in {cowFilesDirectory}:");
 
             if (list)
-                listInColumns(cowfiles);
+                listInColumnsDown(cowfiles);
             else if (!list)
                 listInBunch(cowfiles);
-        }
-
-        static private List<string> listInList(string[] cowfiles)
-        {
-            List<string> cowList = new List<string>();
-            foreach (string file in cowfiles)
-            {
-                string fileName = Path.GetFileName(file);
-                cowList.Add(fileName.Remove(fileName.IndexOf(".cow"), 4));
-                //Console.WriteLine($"    {fileName.Remove(fileName.IndexOf(".cow"),4)}");
-            }
-            return cowList;
         }
 
         static private void listInBunch(string[] cowfiles)
@@ -58,12 +46,19 @@ namespace CowsaySharp.ConsoleLibrary
             Console.WriteLine(bunch.Trim());
         }
 
-        static private void listInColumns(string[] cowfiles)
+        static private void listInList(string[] cowfiles)
         {
-            List<string> cowFilesList = listInList(cowfiles);
+            List<string> cowFilesList = StringArrayOfFilesToList.GetList(cowfiles);
+            foreach(string file in cowFilesList)
+            {
+                Console.WriteLine(file);
+            }
+        }
+
+        static private void listInColumnsAcross(string[] cowfiles)
+        {
+            List<string> cowFilesList =  StringArrayOfFilesToList.GetList(cowfiles);
             var columnSize = (short)cowFilesList.Max(s => s.Length) + 2;
-            string columnSizeString = columnSize.ToString();
-            
 
             for (int i = 0; i < cowFilesList.Count; i++)
             {
@@ -83,6 +78,52 @@ namespace CowsaySharp.ConsoleLibrary
                 i = i + 3;
                 Console.WriteLine(columns);
             }
+        }
+
+        static private void listInColumnsDown(string[] cowfiles)
+        {
+            List<string> cowFilesList =  StringArrayOfFilesToList.GetList(cowfiles);
+            List<string> returnList = new List<string>();
+            StringBuilder fullList = new StringBuilder();
+            const int numberOfColumns = 3;
+            int columnSize = (short)cowFilesList.Max(s => s.Length) + 2;
+            int numberOfFiles = cowFilesList.Count;
+            int numberOfLines = ((numberOfFiles - (numberOfFiles % numberOfColumns)) / numberOfColumns) + 1;
+
+            for (int currentIndexOfFile = 0,currentRowOfColulmn = 0,currentColumn = 0; currentColumn < numberOfColumns && currentIndexOfFile < numberOfFiles; currentIndexOfFile++,currentRowOfColulmn++)
+{
+                StringBuilder sb = new StringBuilder();
+                string file = cowFilesList[currentIndexOfFile];
+                string toAppend = String.Format($"{{0,-{columnSize}}}", file);
+
+                if (currentColumn == 0)
+                {
+                    sb.Append(toAppend);
+                    returnList.Add(sb.ToString());
+                }
+                else
+                {
+                    sb.Append(returnList[currentRowOfColulmn - 1]);
+                    sb.Append(toAppend);
+                    returnList[currentRowOfColulmn-1] = sb.ToString();
+                }
+
+                if (currentRowOfColulmn == numberOfLines - 1 && currentColumn == 0)
+                { 
+                    currentColumn++;
+                    currentRowOfColulmn = 0;
+                }
+                else if (currentRowOfColulmn == numberOfLines)
+                {
+                    currentColumn++;
+                    currentRowOfColulmn = 0;
+                }
+            }
+
+            foreach (string item in returnList)
+                fullList.AppendLine(item);
+
+            Console.WriteLine(fullList.ToString().Trim());
         }
     }
 }
