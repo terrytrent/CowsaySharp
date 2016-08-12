@@ -74,7 +74,7 @@ namespace CowsaySharp.Library
 
             foreach (string line in cowList)
             {
-                if (!(line.StartsWith("#") || line.StartsWith("$") || line.Equals("EOC")))
+                if (!(line.StartsWith("#") || line.StartsWith("$") || line.StartsWith("EOC")))
                     cowToReturn.Append(line + Environment.NewLine);
             }
 
