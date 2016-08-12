@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using CowsaySharp.Common;
@@ -25,18 +27,21 @@ namespace CowsaySharp.ConsoleLibrary
             Console.WriteLine($"Cow files in {cowFilesDirectory}:");
 
             if (list)
-                listInList(cowfiles);
+                listInColumns(cowfiles);
             else if (!list)
                 listInBunch(cowfiles);
         }
 
-        static private void listInList(string[] cowfiles)
+        static private List<string> listInList(string[] cowfiles)
         {
+            List<string> cowList = new List<string>();
             foreach (string file in cowfiles)
             {
                 string fileName = Path.GetFileName(file);
-                Console.WriteLine($"    {fileName.Remove(fileName.IndexOf(".cow"),4)}");
+                cowList.Add(fileName.Remove(fileName.IndexOf(".cow"), 4));
+                //Console.WriteLine($"    {fileName.Remove(fileName.IndexOf(".cow"),4)}");
             }
+            return cowList;
         }
 
         static private void listInBunch(string[] cowfiles)
@@ -55,19 +60,27 @@ namespace CowsaySharp.ConsoleLibrary
 
         static private void listInColumns(string[] cowfiles)
         {
-            for (int i = 0; i < cowfiles.Length; i++)
+            List<string> cowFilesList = listInList(cowfiles);
+            var columnSize = (short)cowFilesList.Max(s => s.Length) + 5;
+            string columnSizeString = columnSize.ToString();
+            
+
+            for (int i = 0; i < cowFilesList.Count; i++)
             {
                 string firstColumn;
                 string secondColumn;
                 string thirdColumn;
 
-                if(!String.IsNullOrEmpty(cowfiles[i]))
-                    firstColumn = cowfiles[i];
-                if (!String.IsNullOrEmpty(cowfiles[i]))
-                    secondColumn = cowfiles[i+1];
-                if (!String.IsNullOrEmpty(cowfiles[i]))
-                    thirdColumn = cowfiles[i+2];
-                string columns = $"{cowfiles[i],-10}{cowfiles[i + 1],-10}{cowfiles[i + 2],-10}";
+                if(!String.IsNullOrEmpty(cowFilesList[i]))
+                    firstColumn = cowFilesList[i];
+                if (!String.IsNullOrEmpty(cowFilesList[i+1]))
+                    secondColumn = cowFilesList[i+1];
+                if (!String.IsNullOrEmpty(cowFilesList[i+2]))
+                    thirdColumn = cowFilesList[i+2];
+
+                string columns = String.Format($"{0}{1}{2}", cowFilesList[i], cowFilesList[i + 1], cowFilesList[i + 2]);
+                    //$"{cowFilesList[i],columnSize.ToString("g")}{cowFilesList[i + 1],-columnSize}{cowFilesList[i + 2],-columnSize}";
+
                 i = i + 3;
                 Console.WriteLine(columns);
             }
