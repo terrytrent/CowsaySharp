@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CowsaySharp.ConsoleLibrary", "Console\CowsaySharp.ConsoleLibrary\CowsaySharp.ConsoleLibrary.csproj", "{BC1058D1-4A6A-499F-9FE8-B5C9CF47976A}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CowsaySharp.Library", "CowsaySharp.Library\CowsaySharp.Library.csproj", "{ECD6463C-4829-4271-B8C0-8F72F868E96C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{C41B18ED-FE64-47EC-95A9-07DCE7603A10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cmndlet", "cmndlet", "{1CC1273D-E8AC-49DE-8F26-6C72B8C68F48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CowsaySharp.GetCowsay", "cmdlet\Get-Cowsay\CowsaySharp.GetCowsay.csproj", "{5D53A629-6577-4253-99EC-196D77EB1CC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +56,12 @@ Global
 		{ECD6463C-4829-4271-B8C0-8F72F868E96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECD6463C-4829-4271-B8C0-8F72F868E96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECD6463C-4829-4271-B8C0-8F72F868E96C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D53A629-6577-4253-99EC-196D77EB1CC8}.CowsaySharp Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D53A629-6577-4253-99EC-196D77EB1CC8}.CowsaySharp Release|Any CPU.Build.0 = Release|Any CPU
+		{5D53A629-6577-4253-99EC-196D77EB1CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D53A629-6577-4253-99EC-196D77EB1CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D53A629-6577-4253-99EC-196D77EB1CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D53A629-6577-4253-99EC-196D77EB1CC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +70,6 @@ Global
 		{BC1058D1-4A6A-499F-9FE8-B5C9CF47976A} = {C41B18ED-FE64-47EC-95A9-07DCE7603A10}
 		{D6582C02-D591-42B6-A74A-278B34B66159} = {C41B18ED-FE64-47EC-95A9-07DCE7603A10}
 		{7AC89FBC-5AE9-4B03-86BA-E1D83BE4C612} = {C41B18ED-FE64-47EC-95A9-07DCE7603A10}
+		{5D53A629-6577-4253-99EC-196D77EB1CC8} = {1CC1273D-E8AC-49DE-8F26-6C72B8C68F48}
 	EndGlobalSection
 EndGlobal

@@ -90,10 +90,6 @@
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CowsaySharp.Library\CowsaySharp.Library.csproj">
-      <Project>{ecd6463c-4829-4271-b8c0-8f72f868e96c}</Project>
-      <Name>CowsaySharp.Library</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CowsaySharp.ConsoleLibrary\CowsaySharp.ConsoleLibrary.csproj">
       <Project>{bc1058d1-4a6a-499f-9fe8-b5c9cf47976a}</Project>
       <Name>CowsaySharp.ConsoleLibrary</Name>
