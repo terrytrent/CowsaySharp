@@ -16,10 +16,12 @@ namespace CowsaySharp.ConsoleLibrary
             bool cowProcessing = false;
             bool cowFileTested = false;
             bool presetFaceSet = false;
+            bool isFiglet = false;
 
             string cowFileLocation = $"{programDir}\\cows";
             string cowSpecified = $"{cowFileLocation}\\default.cow";
             string argument;
+            string messageAsString;
 
             StringBuilder message = new StringBuilder();
 
@@ -45,6 +47,13 @@ namespace CowsaySharp.ConsoleLibrary
                                 cowProcessing = true;
                             columnSize = int.Parse(args[i + 1]);
                             i++;
+                            break;
+                        case 'n':
+                            if (!cowProcessing)
+                                cowProcessing = true;
+
+                            isFiglet = true;
+
                             break;
                         case 'b':
                             if (!cowProcessing)
@@ -206,7 +215,11 @@ namespace CowsaySharp.ConsoleLibrary
 
                 if (!breakOut)
                 {
-                    SpeechBubble Speak = new SpeechBubble(message.ToString().Trim(), think, columnSize);
+                    if (isFiglet)
+                        messageAsString = message.ToString();
+                    else
+                        messageAsString = message.ToString().Trim();
+                    SpeechBubble Speak = new SpeechBubble(messageAsString, think, columnSize, isFiglet);
                     GetCow.ReturnCow(cowSpecified, think, face);
                 }
             }
