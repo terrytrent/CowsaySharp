@@ -12,18 +12,14 @@ namespace CowsaySharp.Library
         static public void ReturnCow(string cowFile, bool think, CowFace face)
         {
             StreamReader sr = new StreamReader(cowFile);
-            cow = new StringBuilder();
-            cow.Append(sr.ReadToEnd().ToString());
+            Bubbles bubbles = new Bubbles();
+            cow = new StringBuilder(sr.ReadToEnd().ToString());
+            cow = removeExtraCowLines(cow);
+
             bool threeEyes = false;
             if (cow.ToString().Contains("($extra x 2)"))
                 threeEyes = true;
 
-
-            cow = removeExtraCowLines(cow);
-
-            string cowString = cow.ToString();
-
-            Bubbles bubbles = new Bubbles();
             if (think)
             {
                 bubbles.setBubbles(Bubbles.bubbleType.think);
@@ -38,7 +34,7 @@ namespace CowsaySharp.Library
             {
                 string eyesForReplacement = new String(face.Eyes[0], 3);
                 cow.Replace("$eyes", eyesForReplacement);
-                cow.Replace("${eyes}", new String(face.Eyes[0], 3));
+                cow.Replace("${eyes}", eyesForReplacement);
             }
             else
             {
@@ -48,12 +44,10 @@ namespace CowsaySharp.Library
             }
             cow.Replace("$tongue", face.Tongue);
 
-            if (cowString.Substring(0, 1) == "\n")
+            if (cow.ToString().Substring(0, 1) == "\n")
                 cow.Remove(0, 1);
 
-            cowString = cow.ToString().TrimEnd();
-
-            Console.WriteLine(cowString);
+            Console.WriteLine(cow.ToString().TrimEnd());
         }
 
         static private StringBuilder removeExtraCowLines(StringBuilder cow)
