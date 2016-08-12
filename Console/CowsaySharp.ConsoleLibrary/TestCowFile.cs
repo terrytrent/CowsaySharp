@@ -1,10 +1,6 @@
 ﻿using System;
 using System.IO;
 using CowsaySharp.Common;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CowsaySharp.ConsoleLibrary
 {
@@ -36,24 +32,23 @@ namespace CowsaySharp.ConsoleLibrary
                     cowProcessing = false;
                 }
 
-                if (cowFile.Length == 0)
+                if (cowFile.Length == 0 && !breakOut)
                 {
                     Console.WriteLine($"You specified a directory but did not specify a Cow File.");
                     breakOut = true;
                     cowProcessing = false;
                 }
                 else if (!cowFile.EndsWith(".cow"))
-                {
                     cowSpecified += ".cow";
-                }
             }
             else
             {
+                cowSpecified = $"{cowFileLocation}\\{cowSpecified}";
+
                 if (!cowSpecified.EndsWith(".cow"))
-                    cowSpecified = $"{cowFileLocation}\\{cowSpecified}.cow";
-                else
-                    cowSpecified = $"{cowFileLocation}\\{cowSpecified}";
+                    cowSpecified = $"{cowSpecified}.cow";
             }
+
             if (!breakOut && !ValidateFile.validate(cowSpecified))
             {
                 Console.WriteLine($"The Cow File you specified does not exist or cannot be accessed:\n{cowSpecified}");

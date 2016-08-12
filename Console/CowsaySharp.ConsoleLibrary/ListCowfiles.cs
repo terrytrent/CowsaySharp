@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using CowsaySharp.Common;
 
@@ -56,5 +53,24 @@ namespace CowsaySharp.ConsoleLibrary
             Console.WriteLine(bunch.Trim());
         }
 
+        static private void listInColumns(string[] cowfiles)
+        {
+            for (int i = 0; i < cowfiles.Length; i++)
+            {
+                string firstColumn;
+                string secondColumn;
+                string thirdColumn;
+
+                if(!String.IsNullOrEmpty(cowfiles[i]))
+                    firstColumn = cowfiles[i];
+                if (!String.IsNullOrEmpty(cowfiles[i]))
+                    secondColumn = cowfiles[i+1];
+                if (!String.IsNullOrEmpty(cowfiles[i]))
+                    thirdColumn = cowfiles[i+2];
+                string columns = $"{cowfiles[i],-10}{cowfiles[i + 1],-10}{cowfiles[i + 2],-10}";
+                i = i + 3;
+                Console.WriteLine(columns);
+            }
+        }
     }
 }

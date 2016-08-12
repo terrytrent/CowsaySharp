@@ -7,25 +7,30 @@ namespace CowsaySharp.ConsoleLibrary
 {
     static public class Switches
     {
-        static string cowFileLocation;
-        static StringBuilder message = new StringBuilder();
+        //static string cowFileLocation;
+        //static StringBuilder message = new StringBuilder();
 
         static public void processSwitches(string[] args, string programDir, bool think)
         {
             bool breakOut = false;
             bool cowProcessing = false;
             bool cowFileTested = false;
-            cowFileLocation = $"{programDir}\\cows";
-            string cowSpecified = $"{cowFileLocation}\\default.cow";
-            CowFace face = new CowFace("OO", null);
             bool presetFaceSet = false;
-            int columnSize = 40;
+
+            string cowFileLocation = $"{programDir}\\cows";
+            string cowSpecified = $"{cowFileLocation}\\default.cow";
+            string argument;
+
+            StringBuilder message = new StringBuilder();
+
+            CowFace face = new CowFace("OO", null);
 
             int numberOfArguments = args.Length;
+            int columnSize = 40;
 
             for (int i = 0; i < numberOfArguments; i++)
             {
-                string argument = args[i];
+                argument = args[i];
                 if (args[i].Contains('-'))
                     argument = args[i].Remove(args[i].IndexOf('-'), 1);
                 else
@@ -178,7 +183,8 @@ namespace CowsaySharp.ConsoleLibrary
                             break;
                         case '!':
                         default:
-                            if (!cowProcessing) cowProcessing = true;
+                            if (!cowProcessing)
+                                cowProcessing = true;
 
                             for (int j = i; j < numberOfArguments; j++)
                                 message.Append(args[j] + " ");
