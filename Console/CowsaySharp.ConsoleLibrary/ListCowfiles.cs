@@ -35,15 +35,13 @@ namespace CowsaySharp.ConsoleLibrary
         static private void listInBunch(string[] cowfiles)
         {
             StringBuilder bunchBuilder = new StringBuilder();
-            foreach (string file in cowfiles)
+            List<string> cowFilesList = StringArrayOfFilesToList.GetList(cowfiles);
+            foreach (string file in cowFilesList)
             {
-                string fileName = Path.GetFileName(file);
-                bunchBuilder.Append($"{fileName.Remove(fileName.IndexOf(".cow"), 4)} ");
+                bunchBuilder.Append($"{file} ");
             }
 
-            string bunch = bunchBuilder.ToString();
-
-            Console.WriteLine(bunch.Trim());
+            Console.WriteLine(bunchBuilder.ToString().Trim());
         }
 
         static private void listInList(string[] cowfiles)
