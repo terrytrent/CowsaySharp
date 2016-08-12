@@ -8,15 +8,16 @@ namespace CowsaySharp.Library
     public class SpeechBubble
     {
         
-        public SpeechBubble(string message) : this(message, false, null)
+        public SpeechBubble(string message) : this(message, false, null, false)
         {
         }
 
-        public SpeechBubble(string message, bool think, int? maxLineLength)
+        public SpeechBubble(string message, bool think, int? maxLineLength, bool figlet)
         {
             char[] splitChar = { ' ' };
             Bubbles bubbles = new Bubbles();
-            if(think)
+            List<string> messageAsList = new List<string>();
+            if (think)
             {
                 bubbles.setBubbles(Bubbles.bubbleType.think);
             }
@@ -34,7 +35,10 @@ namespace CowsaySharp.Library
                 throw new ArgumentOutOfRangeException(nameof(maxLineLength), "Cannot specify a size smaller than 10 characters or larger than 78 characters");
             }
 
-            List<string> messageAsList = SplitToLinesAsList(message, splitChar, (int)maxLineLength);
+            if(figlet)
+                messageAsList = SplitFigletToLinesAsList(message);
+            else
+                messageAsList = SplitToLinesAsList(message, splitChar, (int)maxLineLength);
 
             if (message.Length > maxLineLength)
             {
@@ -105,6 +109,29 @@ namespace CowsaySharp.Library
                 ListToReturn.Add(text.Substring(index, splitAt).Trim());
 
                 index += splitAt;
+            }
+
+            return ListToReturn;
+        }
+
+        List<string> SplitFigletToLinesAsList(string text)
+        {
+            List<string> ListToReturn = new List<string>();
+            var sb = new StringBuilder(text);
+
+            while(sb.Length > 0)
+            {
+                try
+                {
+                    int indexOfFirstNewLine = sb.ToString().IndexOf(Environment.NewLine);
+                    ListToReturn.Add(sb.ToString().Substring(0, indexOfFirstNewLine));
+                    sb.Remove(0, indexOfFirstNewLine + 2);
+                }
+                catch
+                {
+                    ListToReturn.Add(sb.ToString().Substring(0));
+                    sb.Clear();
+                }
             }
 
             return ListToReturn;
