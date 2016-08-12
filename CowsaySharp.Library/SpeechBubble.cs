@@ -64,31 +64,27 @@ namespace CowsaySharp.Library
 
         string createLargeWordBubble(List<string> list, Bubbles bubbles)
         {
-            string message = "";
-
+            StringBuilder bubbleBuilder = new StringBuilder();
             int longestLineInList = list.Max(s => s.Length);
-            int lengthOfTopAndBottomLinesInBubble = longestLineInList + 1;
-            string topBubbleLine = repeatCharacter('_', lengthOfTopAndBottomLinesInBubble);
-            string bottomBubbleLine = repeatCharacter('-', lengthOfTopAndBottomLinesInBubble);
-            string firstLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[0].Length);
-            string lastLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[list.Count - 1].Length);
+            int lengthOfTopAndBottomLinesInBubble = longestLineInList + 2;
+            string topBubbleLine = $" {repeatCharacter('_', lengthOfTopAndBottomLinesInBubble)}";
+            string bottomBubbleLine = $" {repeatCharacter('-', lengthOfTopAndBottomLinesInBubble)}";
+            string firstLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[0].Length + 1);
+            string lastLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[list.Count - 1].Length + 1);
 
-            list[0] = $"{bubbles.UpLeft} {list[0]}{firstLineInMessageSpaces}{bubbles.UpRight}";
-            list[list.Count - 1] = $"{bubbles.DownLeft} {list[list.Count - 1]}{lastLineInMessageSpaces}{bubbles.DownRight}";
+            bubbleBuilder.AppendLine(topBubbleLine);
+            bubbleBuilder.AppendLine($"{bubbles.UpLeft} {list[0]}{firstLineInMessageSpaces}{bubbles.UpRight}");
             for (int i = 1; i < list.Count() - 1; i++)
             {
                 int numberofspaces = longestLineInList - list[i].Length;
                 string spacesInLine = repeatCharacter(' ', numberofspaces + 1);
 
-                list[i] = $"{bubbles.Left} {list[i]}{spacesInLine}{bubbles.Right}";
+                bubbleBuilder.AppendLine($"{bubbles.Left} {list[i]}{spacesInLine}{bubbles.Right}");
             }
+            bubbleBuilder.AppendLine($"{bubbles.DownLeft} {list[list.Count - 1]}{lastLineInMessageSpaces}{bubbles.DownRight}");
+            bubbleBuilder.AppendLine(bottomBubbleLine);
 
-            foreach (string line in list)
-            {
-                message = $"{message}\r\n{line}";
-            }
-
-            return $" {topBubbleLine} {Environment.NewLine}{message.Trim()}\r\n {bottomBubbleLine}";
+            return bubbleBuilder.ToString();
         }
 
         List<string> SplitToLinesAsList(string text, char[] splitOnCharacters, int maxStringLength)
@@ -99,18 +95,13 @@ namespace CowsaySharp.Library
 
             while (text.Length > index)
             {
-                // start a new line, unless we've just started
                 if (index != 0)
                     sb.AppendLine();
 
-                // get the next substring, else the rest of the string if remainder is shorter than `maxStringLength`
                 var splitAt = index + maxStringLength <= text.Length ? text.Substring(index, maxStringLength).LastIndexOfAny(splitOnCharacters) : text.Length - index;
 
-                // if can't find split location, take `maxStringLength` characters
                 splitAt = (splitAt == -1) ? maxStringLength : splitAt;
 
-                // add result to collection & increment index
-                //sb.Append(text.Substring(index, splitAt).Trim());
                 ListToReturn.Add(text.Substring(index, splitAt).Trim());
 
                 index += splitAt;
@@ -118,43 +109,5 @@ namespace CowsaySharp.Library
 
             return ListToReturn;
         }
-
-        
-        //attempt at creating a figlet interpretter....failure.
-        //public List<string> StoreLinesInList(string text)
-        //{
-        //    List<string> ListToReturn = new List<string>();
-
-        //    string stringToSplitOn = Environment.NewLine;
-
-        //    StringBuilder message = new StringBuilder();
-
-        //    message.Append(text);
-
-        //    string messageAsString = message.ToString();
-        //    int indexOfStringToSplit = messageAsString.IndexOf(stringToSplitOn);
-
-        //    int firstIndex = 0;
-        //    while (message.Length > 0)
-        //    {
-        //        ListToReturn.Add(messageAsString.Substring(firstIndex, indexOfStringToSplit));
-        //        message.Remove(firstIndex, indexOfStringToSplit);
-                
-
-        //        messageAsString = message.ToString();
-        //        if (messageAsString.IndexOf(stringToSplitOn) == -1)
-        //        {
-        //            indexOfStringToSplit = messageAsString.Length;
-        //        }
-        //        else
-        //        {
-        //            indexOfStringToSplit = messageAsString.Substring(firstIndex).IndexOf(stringToSplitOn);
-        //            message.Remove(0, 2);
-        //        }
-
-        //    }
-
-        //    return ListToReturn;
-        //}
     }
 }
