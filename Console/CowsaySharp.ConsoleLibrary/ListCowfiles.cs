@@ -61,7 +61,7 @@ namespace CowsaySharp.ConsoleLibrary
         static private void listInColumns(string[] cowfiles)
         {
             List<string> cowFilesList = listInList(cowfiles);
-            var columnSize = (short)cowFilesList.Max(s => s.Length) + 5;
+            var columnSize = (short)cowFilesList.Max(s => s.Length) + 2;
             string columnSizeString = columnSize.ToString();
             
 
@@ -78,8 +78,7 @@ namespace CowsaySharp.ConsoleLibrary
                 if (!String.IsNullOrEmpty(cowFilesList[i+2]))
                     thirdColumn = cowFilesList[i+2];
 
-                string columns = String.Format($"{0}{1}{2}", cowFilesList[i], cowFilesList[i + 1], cowFilesList[i + 2]);
-                    //$"{cowFilesList[i],columnSize.ToString("g")}{cowFilesList[i + 1],-columnSize}{cowFilesList[i + 2],-columnSize}";
+                string columns = String.Format($"{{0,-{columnSize}}}{{1,-{columnSize}}}{{2,-{columnSize}}}", cowFilesList[i], cowFilesList[i + 1], cowFilesList[i + 2]);
 
                 i = i + 3;
                 Console.WriteLine(columns);
