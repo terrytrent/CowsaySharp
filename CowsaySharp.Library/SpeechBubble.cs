@@ -8,23 +8,12 @@ namespace CowsaySharp.Library
     public class SpeechBubble
     {
         
-        public SpeechBubble(string message) : this(message, false, null, false)
+        static public string ReturnSpeechBubble(string message)
         {
+            return ReturnSpeechBubble(message, false, null, false);
         }
 
-        public SpeechBubble(string message, bool think, int? maxLineLength, bool figlet)
-        {
-            string SpeechBubble = returnSpeechBubble(message, think, maxLineLength, figlet);
-
-            Console.WriteLine(SpeechBubble);
-        }
-
-        static public string returnSpeechBubble(string message)
-        {
-            return returnSpeechBubble(message, false, null, false);
-        }
-
-        static public string returnSpeechBubble(string message, bool think, int? maxLineLength, bool figlet)
+        static public string ReturnSpeechBubble(string message, bool think, int? maxLineLength, bool figlet)
         {
             char[] splitChar = { ' ' };
             Bubbles bubbles = new Bubbles();

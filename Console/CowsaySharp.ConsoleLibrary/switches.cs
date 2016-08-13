@@ -219,8 +219,11 @@ namespace CowsaySharp.ConsoleLibrary
                         messageAsString = message.ToString();
                     else
                         messageAsString = message.ToString().Trim();
-                    SpeechBubble Speak = new SpeechBubble(messageAsString, think, columnSize, isFiglet);
-                    GetCow.ReturnCow(cowSpecified, think, face);
+
+                    string SpeechBubbleReturned = SpeechBubble.ReturnSpeechBubble(messageAsString, think, columnSize, isFiglet);
+                    string CowReturned = GetCow.ReturnCow(cowSpecified, think, face);
+
+                    Console.WriteLine(SpeechBubbleReturned + Environment.NewLine + CowReturned);
                 }
             }
 
