@@ -7,9 +7,6 @@ namespace CowsaySharp.ConsoleLibrary
 {
     static public class Switches
     {
-        //static string cowFileLocation;
-        //static StringBuilder message = new StringBuilder();
-
         static public void processSwitches(string[] args, string programDir, bool think)
         {
             bool breakOut = false;
