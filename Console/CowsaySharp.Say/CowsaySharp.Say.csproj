@@ -74,6 +74,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,18 +83,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CowsaySharp.ConsoleLibrary\Help.cs">
+      <Link>CowsaySharp.ConsoleLibrary\Help.cs</Link>
+    </Compile>
+    <Compile Include="..\CowsaySharp.ConsoleLibrary\ListCowfiles.cs">
+      <Link>CowsaySharp.ConsoleLibrary\ListCowfiles.cs</Link>
+    </Compile>
+    <Compile Include="..\CowsaySharp.ConsoleLibrary\Switches.cs">
+      <Link>CowsaySharp.ConsoleLibrary\Switches.cs</Link>
+    </Compile>
+    <Compile Include="..\CowsaySharp.ConsoleLibrary\TestCowFile.cs">
+      <Link>CowsaySharp.ConsoleLibrary\TestCowFile.cs</Link>
+    </Compile>
+    <Compile Include="CowsaySharp.Common\StringArrayOfFilesToList.cs" />
+    <Compile Include="CowsaySharp.Common\validateDirectory.cs" />
+    <Compile Include="CowsaySharp.Common\validateFile.cs" />
+    <Compile Include="CowsaySharp.Library\Bubbles.cs" />
+    <Compile Include="CowsaySharp.Library\CowFace.cs" />
+    <Compile Include="CowsaySharp.Library\CowFaces.cs" />
+    <Compile Include="CowsaySharp.Library\GetCow.cs" />
+    <Compile Include="CowsaySharp.Library\SpeechBubble.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CowsaySharp.ConsoleLibrary\CowsaySharp.ConsoleLibrary.csproj">
-      <Project>{bc1058d1-4a6a-499f-9fe8-b5c9cf47976a}</Project>
-      <Name>CowsaySharp.ConsoleLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

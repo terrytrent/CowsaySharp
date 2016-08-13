@@ -19,7 +19,7 @@ namespace CowsaySharp.GetCowsay.Containers
             CowFace face = new CowFace("oO", "U");
             speechBubble = SpeechBubble.ReturnSpeechBubble(speech);
 
-            Cow = GetCow.ReturnCow("C:\\Users\\ttrent\\Source\\Repos\\cowsay_chsarp\\cmdlet\\Get-Cowsay\\bin\\Debug\\cows\\default.cow", false, face);
+            Cow = GetCow.ReturnCow("C:\\Users\\ttrent\\Source\\Repos\\CowsaySharp\\cmdlet\\Get-Cowsay\\bin\\Debug\\cows\\default.cow", false, face);
             SpeechBubbleAndCow = $"{speechBubble}{Environment.NewLine}{Cow}";
         }
     }

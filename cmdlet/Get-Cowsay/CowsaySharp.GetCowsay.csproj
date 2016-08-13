@@ -44,22 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CowsaySharp.Library\Bubbles.cs" />
+    <Compile Include="CowsaySharp.Library\CowFace.cs" />
+    <Compile Include="CowsaySharp.Library\CowFaces.cs" />
     <Compile Include="Cowsay.cs" />
+    <Compile Include="CowsaySharp.Library\GetCow.cs" />
     <Compile Include="GetCowsayCmdlet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CowsaySharp.Library\SpeechBubble.cs" />
+    <Compile Include="CowsaySharp.Common\StringArrayOfFilesToList.cs" />
+    <Compile Include="CowsaySharp.Common\validateDirectory.cs" />
+    <Compile Include="CowsaySharp.Common\validateFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\CowsaySharp.Common\CowsaySharp.Common.csproj">
-      <Project>{6d729d6a-27f3-4a1a-bb97-91d10e864cf6}</Project>
-      <Name>CowsaySharp.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CowsaySharp.Library\CowsaySharp.Library.csproj">
-      <Project>{ecd6463c-4829-4271-b8c0-8f72f868e96c}</Project>
-      <Name>CowsaySharp.Library</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
