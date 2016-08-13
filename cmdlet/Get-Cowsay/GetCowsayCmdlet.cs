@@ -62,6 +62,7 @@ namespace CowsaySharp.GetCowsay
         {
             //generate cow and assign to cowsay container to return
             //base.ProcessRecord();
+            Console.WriteLine(BuildOutputObject().SpeechBubbleAndCow);
             WriteObject(BuildOutputObject());
            
         }

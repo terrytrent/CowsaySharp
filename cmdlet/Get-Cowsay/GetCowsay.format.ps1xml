@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>CowsaySharp.GetCowsay.Containers.Cowsay</Name>
+      <ViewSelectedBy>
+        <TypeName>CowsaySharp.GetCowsay.Containers.Cowsay</TypeName>
+      </ViewSelectedBy>
+      <CustomControl>
+        <CustomEntries>
+          <CustomEntry>
+            <CustomItem>
+              <Frame>
+                <CustomItem>
+                  <ExpressionBinding>
+                    <ScriptBlock>($_).SpeechBubbleAndCow</ScriptBlock>
+                  </ExpressionBinding>
+                </CustomItem>
+              </Frame>
+            </CustomItem>
+          </CustomEntry>
+        </CustomEntries>
+      </CustomControl>
+    </View>
+</ViewDefinitions>
+</Configuration>
