@@ -14,6 +14,18 @@ namespace CowsaySharp.Library
 
         public SpeechBubble(string message, bool think, int? maxLineLength, bool figlet)
         {
+            string SpeechBubble = returnSpeechBubble(message, think, maxLineLength, figlet);
+
+            Console.WriteLine(SpeechBubble);
+        }
+
+        static public string returnSpeechBubble(string message)
+        {
+            return returnSpeechBubble(message, false, null, false);
+        }
+
+        static public string returnSpeechBubble(string message, bool think, int? maxLineLength, bool figlet)
+        {
             char[] splitChar = { ' ' };
             Bubbles bubbles = new Bubbles();
             List<string> messageAsList = new List<string>();
@@ -30,12 +42,12 @@ namespace CowsaySharp.Library
             {
                 maxLineLength = 40;
             }
-            else if(maxLineLength > 76 || maxLineLength < 10)
+            else if (maxLineLength > 76 || maxLineLength < 10)
             {
                 throw new ArgumentOutOfRangeException(nameof(maxLineLength), "Cannot specify a size smaller than 10 characters or larger than 78 characters");
             }
 
-            if(figlet)
+            if (figlet)
                 messageAsList = SplitFigletToLinesAsList(message);
             else
                 messageAsList = SplitToLinesAsList(message, splitChar, (int)maxLineLength);
@@ -48,15 +60,16 @@ namespace CowsaySharp.Library
             {
                 message = createSmallWordBubble(message, bubbles);
             }
-            Console.WriteLine(message);
+
+            return message;
         }
 
-        string repeatCharacter(char character, int numberOfUnderscores)
+        static string repeatCharacter(char character, int numberOfUnderscores)
         {
             return new string(character, numberOfUnderscores);
         }
 
-        string createSmallWordBubble(string message, Bubbles bubbles)
+        static string createSmallWordBubble(string message, Bubbles bubbles)
         {
             int lengthOfMessage = message.Length;
             int lengthOfTopAndBottomLinesInBubble = lengthOfMessage + 2;
@@ -66,7 +79,7 @@ namespace CowsaySharp.Library
             return $" {topBubbleLine} \r\n{bubbles.SmallLeft} {message.Trim()} {bubbles.SmallRight}\r\n {bottomBubbleLine}";
         }
 
-        string createLargeWordBubble(List<string> list, Bubbles bubbles)
+        static string createLargeWordBubble(List<string> list, Bubbles bubbles)
         {
             StringBuilder bubbleBuilder = new StringBuilder();
             int longestLineInList = list.Max(s => s.Length);
@@ -91,7 +104,7 @@ namespace CowsaySharp.Library
             return bubbleBuilder.ToString();
         }
 
-        List<string> SplitToLinesAsList(string text, char[] splitOnCharacters, int maxStringLength)
+        static List<string> SplitToLinesAsList(string text, char[] splitOnCharacters, int maxStringLength)
         {
             List<string> ListToReturn = new List<string>();
             var sb = new StringBuilder();
@@ -114,7 +127,7 @@ namespace CowsaySharp.Library
             return ListToReturn;
         }
 
-        List<string> SplitFigletToLinesAsList(string text)
+        static List<string> SplitFigletToLinesAsList(string text)
         {
             List<string> ListToReturn = new List<string>();
             var sb = new StringBuilder(text);

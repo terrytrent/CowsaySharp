@@ -11,6 +11,13 @@ namespace CowsaySharp.Library
 
         static public void ReturnCow(string cowFile, bool think, CowFace face)
         {
+            string cow = ReturnCowString(cowFile, think, face);
+
+            Console.WriteLine(cow);
+        }
+
+        static public string ReturnCowString(string cowFile, bool think, CowFace face)
+        {
             StreamReader sr = new StreamReader(cowFile);
             Bubbles bubbles = new Bubbles();
             cow = new StringBuilder(sr.ReadToEnd().ToString());
@@ -47,7 +54,8 @@ namespace CowsaySharp.Library
             if (cow.ToString().Substring(0, 1) == "\n")
                 cow.Remove(0, 1);
 
-            Console.WriteLine(cow.ToString().TrimEnd());
+            return cow.ToString().TrimEnd();
+
         }
 
         static private StringBuilder removeExtraCowLines(StringBuilder cow)
