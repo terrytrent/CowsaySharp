@@ -20,7 +20,7 @@ namespace CowsaySharp.Library
             if (String.IsNullOrEmpty(tongue))
                 Tongue = "  ";
             else
-                Tongue = tongue;
+                Tongue = tongue.Substring(0,1);
         }
     }
 }

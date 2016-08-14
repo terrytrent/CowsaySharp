@@ -10,17 +10,15 @@ namespace CowsaySharp.GetCowsay.Containers
 {
     class Cowsay
     {
-        public string speechBubble { get; set; }
+        public string Speech_Bubble { get; set; }
         public string Cow { get; set; }
         public string SpeechBubbleAndCow { get; set; }
 
-        public Cowsay(string cow, string speech)
+        public Cowsay(string cow, string speechBubble)
         {
-            CowFace face = new CowFace("oO", "U");
-            speechBubble = SpeechBubble.ReturnSpeechBubble(speech);
-
-            Cow = GetCow.ReturnCow("C:\\Users\\ttrent\\Source\\Repos\\cowsay_chsarp\\cmdlet\\Get-Cowsay\\bin\\Debug\\cows\\default.cow", false, face);
-            SpeechBubbleAndCow = $"{speechBubble}{Environment.NewLine}{Cow}";
+            Speech_Bubble = speechBubble;
+            Cow = cow;
+            SpeechBubbleAndCow = $"{Speech_Bubble}{Environment.NewLine}{Cow}";
         }
     }
 }

@@ -15,7 +15,7 @@ namespace CowsaySharp.Library
 
         static public string ReturnSpeechBubble(string message, bool think, int? maxLineLength, bool figlet)
         {
-            char[] splitChar = { ' ' };
+            char[] splitChar = { ' ',(char)10,(char)13 };
             Bubbles bubbles = new Bubbles();
             List<string> messageAsList = new List<string>();
             if (think)
@@ -38,10 +38,12 @@ namespace CowsaySharp.Library
 
             if (figlet)
                 messageAsList = SplitFigletToLinesAsList(message);
-            else
+            else if (message.Length > maxLineLength)
                 messageAsList = SplitToLinesAsList(message, splitChar, (int)maxLineLength);
+            else if (message.Length < maxLineLength && message.IndexOfAny(splitChar) != -1)
+                messageAsList = SplitToLinesAsListShort(message);
 
-            if (message.Length > maxLineLength)
+            if (message.Length > maxLineLength || messageAsList.Count > 1)
             {
                 message = createLargeWordBubble(messageAsList, bubbles);
             }
@@ -93,24 +95,68 @@ namespace CowsaySharp.Library
             return bubbleBuilder.ToString();
         }
 
-        static List<string> SplitToLinesAsList(string text, char[] splitOnCharacters, int maxStringLength)
+        static List<string> SplitToLinesAsListShort(string message)
         {
             List<string> ListToReturn = new List<string>();
-            var sb = new StringBuilder();
-            var index = 0;
+            StringBuilder sb = new StringBuilder(message);
+            char[] splitChars = { (char)10, (char)13 };
 
-            while (text.Length > index)
+            int startingIndex = 0;
+            int lengthLeft = sb.ToString().Length;
+
+            while (lengthLeft != 0)
             {
-                if (index != 0)
-                    sb.AppendLine();
 
-                var splitAt = index + maxStringLength <= text.Length ? text.Substring(index, maxStringLength).LastIndexOfAny(splitOnCharacters) : text.Length - index;
+                int lengthIndex = sb.ToString().IndexOfAny(splitChars) != -1 ? sb.ToString().IndexOfAny(splitChars) : sb.ToString().Length;
+                
+                ListToReturn.Add(sb.ToString().Substring(startingIndex, lengthIndex));
+                if (sb.ToString().Length == lengthIndex)
+                    sb.Remove(startingIndex, lengthIndex);
+                else
+                {
+                    string newLineChar = sb.ToString().Substring(lengthIndex, 2);
+                    if (newLineChar == Environment.NewLine)
+                        sb.Remove(startingIndex, lengthIndex + 2);
+                    else
+                        sb.Remove(startingIndex, lengthIndex + 1);
+                }
+                lengthLeft = sb.ToString().Length;
+            }
+
+            return ListToReturn;
+        }
+
+        static List<string> SplitToLinesAsList(string message, char[] splitOnCharacters, int maxStringLength)
+        {
+            List<string> ListToReturn = new List<string>();
+            StringBuilder messageSB = new StringBuilder(message);
+            char[] newLineCharacters = { (char)10,(char)13 };
+            var index = 0;
+            int splitAt;
+
+            while (messageSB.ToString().Length > index)
+            {
+                if(index + maxStringLength <= messageSB.ToString().Length)
+                {
+                    string thisLine = messageSB.ToString().Substring(index, maxStringLength);
+                    if (thisLine.IndexOfAny(newLineCharacters) != -1)
+                        if (thisLine.StartsWith(((char)10).ToString()) || thisLine.StartsWith(((char)13).ToString()))
+                            splitAt = 1;
+                        else
+                            splitAt = thisLine.LastIndexOfAny(newLineCharacters);
+                    else
+                        splitAt = thisLine.LastIndexOf(' ');
+                }
+                else
+                {
+                    splitAt = messageSB.ToString().Length - index;
+                }
 
                 splitAt = (splitAt == -1) ? maxStringLength : splitAt;
 
-                ListToReturn.Add(text.Substring(index, splitAt).Trim());
+                ListToReturn.Add(messageSB.ToString().Substring(index, splitAt).Trim());
+                messageSB.Remove(index, splitAt);
 
-                index += splitAt;
             }
 
             return ListToReturn;
