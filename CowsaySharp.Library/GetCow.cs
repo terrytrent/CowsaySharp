@@ -29,6 +29,8 @@ namespace CowsaySharp.Library
                 bubbles.setBubbles(Bubbles.bubbleType.say);
             }
 
+            cow.Replace("\\\\", "\\");
+
             cow.Replace("$thoughts", bubbles.Bubble);
             if (threeEyes)
             {

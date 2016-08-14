@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 using CowsaySharp.ConsoleLibrary;
+using CowsaySharp.Library;
 
 namespace CowsaySharp.Say
 {

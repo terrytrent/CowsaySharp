@@ -19,7 +19,7 @@ namespace CowsaySharp.GetCowsay
         [Parameter]
         [ValidateSet("borg","dead","greedy","paranoid","stoned","tired","wired","young")]
         [Alias("m")]
-        public string mode { get; set; }
+        public CowFaces.cowFaces mode { get; set; }
 
         [Parameter]
         [Alias("l")]
@@ -55,6 +55,8 @@ namespace CowsaySharp.GetCowsay
         protected override void BeginProcessing()
         {
             //setup variables based on switches
+            if(!mode)
+                CowFace face = new CowFace(mode)
             base.BeginProcessing();
         }
 

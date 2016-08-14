@@ -83,6 +83,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\CowsaySharp.Common\StringArrayOfFilesToList.cs">
+      <Link>CowsaySharp.Common\StringArrayOfFilesToList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Common\ValidateDirectory.cs">
+      <Link>CowsaySharp.Common\ValidateDirectory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Common\ValidateFile.cs">
+      <Link>CowsaySharp.Common\ValidateFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Library\Bubbles.cs">
+      <Link>CowsaySharp.Library\Bubbles.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Library\CowFace.cs">
+      <Link>CowsaySharp.Library\CowFace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Library\CowFaces.cs">
+      <Link>CowsaySharp.Library\CowFaces.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Library\GetCow.cs">
+      <Link>CowsaySharp.Library\GetCow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Library\SpeechBubble.cs">
+      <Link>CowsaySharp.Library\SpeechBubble.cs</Link>
+    </Compile>
     <Compile Include="..\CowsaySharp.ConsoleLibrary\Help.cs">
       <Link>CowsaySharp.ConsoleLibrary\Help.cs</Link>
     </Compile>
@@ -95,14 +119,6 @@
     <Compile Include="..\CowsaySharp.ConsoleLibrary\TestCowFile.cs">
       <Link>CowsaySharp.ConsoleLibrary\TestCowFile.cs</Link>
     </Compile>
-    <Compile Include="CowsaySharp.Common\StringArrayOfFilesToList.cs" />
-    <Compile Include="CowsaySharp.Common\validateDirectory.cs" />
-    <Compile Include="CowsaySharp.Common\validateFile.cs" />
-    <Compile Include="CowsaySharp.Library\Bubbles.cs" />
-    <Compile Include="CowsaySharp.Library\CowFace.cs" />
-    <Compile Include="CowsaySharp.Library\CowFaces.cs" />
-    <Compile Include="CowsaySharp.Library\GetCow.cs" />
-    <Compile Include="CowsaySharp.Library\SpeechBubble.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -122,6 +138,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
