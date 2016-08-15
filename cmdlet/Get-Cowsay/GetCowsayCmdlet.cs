@@ -8,35 +8,65 @@ using System.Reflection;
 
 namespace CowsaySharp.GetCowsay
 {
+    /// <summary>
+    /// <para type="synopsis">This cmdlet generates ASCII pictures of a cow with a message.</para> 
+    /// </summary>
+    /// <example>
+    ///   <para>This is part of the first example's introduction.</para>
+    ///   <code>New-Thingy | Write-Host</code>
+    ///   <para>This is part of the first example's remarks.</para>
+    ///   <para>This is also part of the first example's remarks.</para>
+    /// </example>
     [Cmdlet(VerbsCommon.Get, "Cowsay")]
     [OutputType(typeof(Cowsay))]
     public class GetCowsayCmdlet : Cmdlet
     {
+        /// <summary>
+        /// <para type="description">Preset faces to select for the cow.  Will override any eyes or tongue settings set manually.</para>
+        /// </summary>
         [Parameter]
         [ValidateSet("borg","dead","greedy","paranoid","stoned","tired","wired","young")]
         [Alias("m")]
         public string mode { get; set; }
-
+        /// <summary>
+        /// <para type="description">List available cow files in module cows folder.</para> 
+        /// </summary>
+        /// 
         [Parameter]
         [Alias("l")]
         public SwitchParameter list { get; set; }
 
+        /// <summary>
+        /// <para type="description">Enable figlet mode for your message.  Must escape special characters in order to work properly.</para> 
+        /// </summary>
         [Parameter]
         [Alias("n")]
         public SwitchParameter figlet { get; set; }
 
+        /// <summary>
+        /// <para type="description">Eyes for the cow, cannot be more than 2 characters long.  If more than 2 characters long, will be cut off.  Overridden by the mode parameter.</para> 
+        /// </summary>
         [Parameter]
         [Alias("e")]
         public string eyes { get; set; }
 
+        /// <summary>
+        /// <para type="description">Tongue for the cow, cannot be more than 2 characters long.  If more than 2 characters long, will be cut off.  Overridden by the mode parameter. </para> 
+        /// </summary>
         [Parameter]
         [Alias("T")]
         public string tongue { get; set; }
 
+        /// <summary>
+        /// <para type="description">Specify either a specific cowfile found under the Module cows folder or a specific cowfile in a specific directory.</para>
+        /// </summary>
         [Parameter]
         [Alias("f")]
         public string cowfile { get; set; }
 
+        /// <summary>
+        /// <para type="description">Change the width of the speech bubble.  Default is 40 characters wide.  Cannot be less than 10 characters or more than 76 characters.</para>
+        /// </summary>
         [Parameter]
         [Alias("W")]
         public int wrapcolumn
@@ -51,9 +81,15 @@ namespace CowsaySharp.GetCowsay
             }
         }
 
+        /// <summary>
+        /// <para type="description">Make the cow think.</para> 
+        /// </summary>
         [Parameter]
         public SwitchParameter think { get; set; }
 
+        /// <summary>
+        /// <para type="message">What the cow says.</para>
+        /// </summary>
         [Parameter(ValueFromPipeline = true,Position = 0)]
         public string message { get; set; }
 
@@ -151,6 +187,8 @@ namespace CowsaySharp.GetCowsay
             string CowReturned = GetCow.ReturnCow(cowSpecified, think, face);
             return new Cowsay(CowReturned, SpeechBubbleReturned);
         }
+
+        
     }
 }
 
