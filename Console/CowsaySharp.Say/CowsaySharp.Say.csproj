@@ -12,7 +12,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ttrent\Source\CowsaySharpPublish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,15 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ProductName>CowsaySharp</ProductName>
+    <PublisherName>Terry Trent</PublisherName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.2</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -60,6 +66,8 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CowthinkSharp Release|AnyCPU'">
     <OutputPath>bin\CowthinkSharp Release\</OutputPath>
@@ -70,6 +78,29 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1C7F235A45E9129280606DB3145D11A51AB8B388</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>keyname.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -123,8 +154,197 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\CowsaySharp.Library\cows\beavis.zen.cow">
+      <Link>cows\beavis.zen.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\bong.cow">
+      <Link>cows\bong.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\bud-frogs.cow">
+      <Link>cows\bud-frogs.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\bunny.cow">
+      <Link>cows\bunny.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\cheese.cow">
+      <Link>cows\cheese.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\cower.cow">
+      <Link>cows\cower.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\daemon.cow">
+      <Link>cows\daemon.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\default.cow">
+      <Link>cows\default.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\dragon-and-cow.cow">
+      <Link>cows\dragon-and-cow.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\dragon.cow">
+      <Link>cows\dragon.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\elephant-in-snake.cow">
+      <Link>cows\elephant-in-snake.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\elephant.cow">
+      <Link>cows\elephant.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\eyes.cow">
+      <Link>cows\eyes.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\flaming-sheep.cow">
+      <Link>cows\flaming-sheep.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\ghostbusters.cow">
+      <Link>cows\ghostbusters.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\head-in.cow">
+      <Link>cows\head-in.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\hellokitty.cow">
+      <Link>cows\hellokitty.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\kiss.cow">
+      <Link>cows\kiss.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\kitty.cow">
+      <Link>cows\kitty.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\koala.cow">
+      <Link>cows\koala.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\kosh.cow">
+      <Link>cows\kosh.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\luke-koala.cow">
+      <Link>cows\luke-koala.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\meow.cow">
+      <Link>cows\meow.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\milk.cow">
+      <Link>cows\milk.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\moofasa.cow">
+      <Link>cows\moofasa.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\moose.cow">
+      <Link>cows\moose.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\mutilated.cow">
+      <Link>cows\mutilated.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\ren.cow">
+      <Link>cows\ren.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\satanic.cow">
+      <Link>cows\satanic.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\sheep.cow">
+      <Link>cows\sheep.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\skeleton.cow">
+      <Link>cows\skeleton.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\small.cow">
+      <Link>cows\small.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\sodomized.cow">
+      <Link>cows\sodomized.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\squirrel.cow">
+      <Link>cows\squirrel.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\stegosaurus.cow">
+      <Link>cows\stegosaurus.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\stimpy.cow">
+      <Link>cows\stimpy.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\supermilker.cow">
+      <Link>cows\supermilker.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\surgery.cow">
+      <Link>cows\surgery.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\telebears.cow">
+      <Link>cows\telebears.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\three-eyes.cow">
+      <Link>cows\three-eyes.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\turkey.cow">
+      <Link>cows\turkey.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\turtle.cow">
+      <Link>cows\turtle.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\tux.cow">
+      <Link>cows\tux.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\udder.cow">
+      <Link>cows\udder.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\vader-koala.cow">
+      <Link>cows\vader-koala.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\vader.cow">
+      <Link>cows\vader.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\CowsaySharp.Library\cows\www.cow">
+      <Link>cows\www.cow</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="keyname.snk" />
+    <None Include="Properties\app.manifest" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
