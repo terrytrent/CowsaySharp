@@ -33,7 +33,7 @@ namespace CowsaySharp.Library
             }
             else if (maxLineLength > 76 || maxLineLength < 10)
             {
-                throw new ArgumentOutOfRangeException(nameof(maxLineLength), "Cannot specify a size smaller than 10 characters or larger than 78 characters");
+                throw new ArgumentOutOfRangeException(nameof(maxLineLength), "Cannot specify a size smaller than 10 characters or larger than 76 characters");
             }
 
             if (figlet)
@@ -165,13 +165,14 @@ namespace CowsaySharp.Library
         static List<string> SplitFigletToLinesAsList(string text)
         {
             List<string> ListToReturn = new List<string>();
+            char[] newLines = { (char)10, (char)13 };
             var sb = new StringBuilder(text);
 
             while(sb.Length > 0)
             {
                 try
                 {
-                    int indexOfFirstNewLine = sb.ToString().IndexOf(Environment.NewLine);
+                    int indexOfFirstNewLine = sb.ToString().IndexOfAny(newLines);
                     ListToReturn.Add(sb.ToString().Substring(0, indexOfFirstNewLine));
                     sb.Remove(0, indexOfFirstNewLine + 2);
                 }

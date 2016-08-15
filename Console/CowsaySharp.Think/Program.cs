@@ -11,10 +11,9 @@ namespace CowsaySharp.Think
         static void Main(string[] args)
         {
             const bool think = true;
-            strAppDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
-            string strAppDirParsed = strAppDir.Substring(strAppDir.IndexOf("C:\\"), strAppDir.Length - 6);
+            strAppDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            Switches.processSwitches(args, strAppDirParsed, think);
+            Switches.processSwitches(args, strAppDir, think);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace CowsaySharp.ConsoleLibrary
 
             StringBuilder message = new StringBuilder();
 
-            CowFace face = new CowFace("OO", null);
+            CowFace face = CowFaces.getCowFace(CowFaces.cowFaces.defaultFace);
 
             int numberOfArguments = args.Length;
             int columnSize = 40;

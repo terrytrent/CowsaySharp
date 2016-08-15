@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Management.Automation;
 using CowsaySharp.GetCowsay.Containers;
 using CowsaySharp.Library;
 using CowsaySharp.ConsoleLibrary;
-using CowsaySharp.Common;
-
-//https://www.simple-talk.com/dotnet/net-development/using-c-to-create-powershell-cmdlets-the-basics/
+using System.IO;
+using System.Reflection;
 
 namespace CowsaySharp.GetCowsay
 {
@@ -44,7 +39,6 @@ namespace CowsaySharp.GetCowsay
 
         [Parameter]
         [Alias("W")]
-        private int _wrapcolumn = 40;
         public int wrapcolumn
         {
             get
@@ -56,12 +50,14 @@ namespace CowsaySharp.GetCowsay
                 _wrapcolumn = value;
             }
         }
+
         [Parameter]
         public SwitchParameter think { get; set; }
 
-        [Parameter(ValueFromPipeline = true,ValueFromRemainingArguments = true)]
+        [Parameter(ValueFromPipeline = true,Position = 0)]
         public string message { get; set; }
 
+        private int _wrapcolumn = 40;
         string moduleDirectory;
         string cowFileLocation;
         string cowSpecified;
@@ -70,12 +66,13 @@ namespace CowsaySharp.GetCowsay
 
         protected override void BeginProcessing()
         {
-            moduleDirectory = $"C:\\Users\\ttrent\\Source\\Repos\\CowsaySharp\\cmdlet\\Get-Cowsay\\bin\\Debug";
-            cowFileLocation = $"C:\\Users\\ttrent\\Source\\Repos\\CowsaySharp\\cmdlet\\Get-Cowsay\\bin\\Debug\\cows";
+            moduleDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); ;
+            cowFileLocation = $"{moduleDirectory}\\cows";
             cowSpecified = $"{cowFileLocation}\\default.cow";
             face = new CowFace();
 
             if (!String.IsNullOrEmpty(mode))
+            {
                 switch (mode)
                 {
                     case "borg":
@@ -103,16 +100,19 @@ namespace CowsaySharp.GetCowsay
                         face = CowFaces.getCowFace(CowFaces.cowFaces.young);
                         break;
                 }
-            else if(!String.IsNullOrEmpty(eyes))
+            }
+
+            if (!String.IsNullOrEmpty(eyes) && String.IsNullOrWhiteSpace(face.Eyes))
                 face = new CowFace(eyes);
 
-            if (String.IsNullOrEmpty(face.Eyes) && String.IsNullOrEmpty(face.Tongue))
+            if (String.IsNullOrEmpty(face.Eyes))
                 face = CowFaces.getCowFace(CowFaces.cowFaces.defaultFace);
 
             if (!String.IsNullOrEmpty(tongue) && String.IsNullOrWhiteSpace(face.Tongue))
                 face.Tongue = tongue;
 
-            if(!String.IsNullOrEmpty(cowfile))
+
+            if (!String.IsNullOrEmpty(cowfile))
             {
                 cowSpecified = cowfile;
                 TestCowFile testCowFile = new TestCowFile(ref cowSpecified, cowFileLocation);
@@ -124,7 +124,8 @@ namespace CowsaySharp.GetCowsay
                 breakOut = testCowFile.breakOut;
             }
 
-
+            if (wrapcolumn < 10 | wrapcolumn > 76)
+                ThrowTerminatingError(new ErrorRecord(new ArgumentOutOfRangeException(nameof(wrapcolumn), "Cannot specify a size smaller than 10 characters or larger than 76 characters"), "E1", ErrorCategory.LimitsExceeded, this));
         }
 
         protected override void ProcessRecord()

@@ -14,11 +14,11 @@ namespace CowsaySharp.Library
             StreamReader sr = new StreamReader(cowFile);
             Bubbles bubbles = new Bubbles();
             cow = new StringBuilder(sr.ReadToEnd().ToString());
-            cow = removeExtraCowLines(cow);
-
             bool threeEyes = false;
             if (cow.ToString().Contains("($extra x 2)"))
                 threeEyes = true;
+
+            cow = removeExtraCowLines(cow);
 
             if (think)
             {
