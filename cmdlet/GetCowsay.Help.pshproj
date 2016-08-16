@@ -3,7 +3,6 @@
   <Name>GetCowsay</Name>
   <Version>1.0</Version>
   <Description>Generates ASCII pictures of a cow with a message</Description>
-  <ModulePath>C:\Users\ttrent\Source\Repos\cowsay_chsarp\cmdlet\Get-Cowsay\bin\Debug\GetCowsay.psd1</ModulePath>
   <HasManifest>false</HasManifest>
   <Provider>
     <ProviderName>CodePlex</ProviderName>
@@ -376,10 +375,6 @@ If your figlet has special characters, such as the tick(`) character, you must e
         </RelatedLink>
         <RelatedLink>
           <LinkText>https://github.com/piuccio/cowsay</LinkText>
-          <LinkUrl />
-        </RelatedLink>
-        <RelatedLink>
-          <LinkText>&lt;Link&gt;</LinkText>
           <LinkUrl />
         </RelatedLink>
       </RelatedLinks>

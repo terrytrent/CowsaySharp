@@ -33,13 +33,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0E412ED966544AC99F91212F22DCFCEA"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_0DE82CD43584CAC22C08D056C8F6E1A7"
+        "OwnerKey" = "8:_6B57648030BD4BD4B2F08A7B94BA9798"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0F910554E2D745DDB1C7D40F5CE07739"
+        "MsmKey" = "8:_0DE82CD43584CAC22C08D056C8F6E1A7"
+        "OwnerKey" = "8:_30358EB0577652F691BAE49B3D1B48B1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0E412ED966544AC99F91212F22DCFCEA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -65,6 +71,12 @@
         {
         "MsmKey" = "8:_2C14D70667EB46EDB74D1DDDFA862A04"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_30358EB0577652F691BAE49B3D1B48B1"
+        "OwnerKey" = "8:_6B57648030BD4BD4B2F08A7B94BA9798"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -117,6 +129,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6B57648030BD4BD4B2F08A7B94BA9798"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6D2CB09A67734B3189BCE0ECFA9626F3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -137,6 +155,12 @@
         {
         "MsmKey" = "8:_7D7BD932928B402F8A957E6503E4A8A6"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_850A39C2AEA47FF97229A95B4310C961"
+        "OwnerKey" = "8:_6B57648030BD4BD4B2F08A7B94BA9798"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -273,12 +297,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_DFDE01D11DC0651B71D66321341C1FB5"
-        "OwnerKey" = "8:_0F910554E2D745DDB1C7D40F5CE07739"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E0C0D3368C244512B8B2B0CA92FD7439"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -303,38 +321,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F5E0FEB95F27462797861781E20F94DE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_F804180312274795AA48411B1E0A4FE6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F9364AA8B8CB466F2C40B97BBDE8DF5F"
-        "OwnerKey" = "8:_0F910554E2D745DDB1C7D40F5CE07739"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F9364AA8B8CB466F2C40B97BBDE8DF5F"
-        "OwnerKey" = "8:_FD164E16EDBCE8024D20298E3D01FCBA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_F9B448270BF4406BA88B97EBA5E7E525"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FD164E16EDBCE8024D20298E3D01FCBA"
-        "OwnerKey" = "8:_0F910554E2D745DDB1C7D40F5CE07739"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -352,25 +346,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DFDE01D11DC0651B71D66321341C1FB5"
+        "OwnerKey" = "8:_850A39C2AEA47FF97229A95B4310C961"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0F910554E2D745DDB1C7D40F5CE07739"
+        "OwnerKey" = "8:_6B57648030BD4BD4B2F08A7B94BA9798"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FD164E16EDBCE8024D20298E3D01FCBA"
+        "OwnerKey" = "8:_30358EB0577652F691BAE49B3D1B48B1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F9364AA8B8CB466F2C40B97BBDE8DF5F"
+        "OwnerKey" = "8:_0DE82CD43584CAC22C08D056C8F6E1A7"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -397,7 +391,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\ModuleInstaller.msi"
+        "OutputFilename" = "8:Release\\CowsaySharpModule.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -494,6 +488,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0DE82CD43584CAC22C08D056C8F6E1A7"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Management.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_0DE82CD43584CAC22C08D056C8F6E1A7"
+                    {
+                    "Name" = "8:Microsoft.Management.Infrastructure.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.Management.Infrastructure.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B574DEE14EDD41EE9B75978E17E64B9B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0E412ED966544AC99F91212F22DCFCEA"
@@ -594,6 +619,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_30358EB0577652F691BAE49B3D1B48B1"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_30358EB0577652F691BAE49B3D1B48B1"
+                    {
+                    "Name" = "8:System.Management.Automation.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Management.Automation.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B574DEE14EDD41EE9B75978E17E64B9B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_311BA73799F7424C872A6A9CFAE1D84E"
@@ -821,7 +877,7 @@
             "SourcePath" = "8:..\\cmdlet\\Get-Cowsay\\bin\\Release\\GetCowsay.format.ps1xml"
             "TargetName" = "8:GetCowsay.format.ps1xml"
             "Tag" = "8:"
-            "Folder" = "8:_35F807E355BA4598A930E46299510CD8"
+            "Folder" = "8:_B574DEE14EDD41EE9B75978E17E64B9B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -834,6 +890,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_850A39C2AEA47FF97229A95B4310C961"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_850A39C2AEA47FF97229A95B4310C961"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B574DEE14EDD41EE9B75978E17E64B9B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8CFB130136F04569A931E70464601834"
@@ -1276,37 +1363,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DFDE01D11DC0651B71D66321341C1FB5"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_DFDE01D11DC0651B71D66321341C1FB5"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Net.Http.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_35F807E355BA4598A930E46299510CD8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E0C0D3368C244512B8B2B0CA92FD7439"
             {
             "SourcePath" = "8:..\\cmdlet\\Get-Cowsay\\bin\\Release\\cows\\koala.cow"
@@ -1387,32 +1443,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5E0FEB95F27462797861781E20F94DE"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\favicon.ico"
-            "TargetName" = "8:favicon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_35F807E355BA4598A930E46299510CD8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F804180312274795AA48411B1E0A4FE6"
             {
             "SourcePath" = "8:..\\cmdlet\\Get-Cowsay\\bin\\Release\\CowsaySharp.GetCowsay.dll-Help.xml"
             "TargetName" = "8:CowsaySharp.GetCowsay.dll-Help.xml"
             "Tag" = "8:"
-            "Folder" = "8:_35F807E355BA4598A930E46299510CD8"
+            "Folder" = "8:_B574DEE14EDD41EE9B75978E17E64B9B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1425,37 +1461,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F9364AA8B8CB466F2C40B97BBDE8DF5F"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Management.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_F9364AA8B8CB466F2C40B97BBDE8DF5F"
-                    {
-                    "Name" = "8:Microsoft.Management.Infrastructure.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Microsoft.Management.Infrastructure.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_35F807E355BA4598A930E46299510CD8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F9B448270BF4406BA88B97EBA5E7E525"
@@ -1463,7 +1468,7 @@
             "SourcePath" = "8:..\\cmdlet\\Get-Cowsay\\bin\\Release\\GetCowsay.psd1"
             "TargetName" = "8:GetCowsay.psd1"
             "Tag" = "8:"
-            "Folder" = "8:_35F807E355BA4598A930E46299510CD8"
+            "Folder" = "8:_B574DEE14EDD41EE9B75978E17E64B9B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1476,37 +1481,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FD164E16EDBCE8024D20298E3D01FCBA"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_FD164E16EDBCE8024D20298E3D01FCBA"
-                    {
-                    "Name" = "8:System.Management.Automation.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Management.Automation.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_35F807E355BA4598A930E46299510CD8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD8AE7F58D4E4B7F8FADF1EB161B43D5"
@@ -1555,7 +1529,7 @@
         }
         "Folder"
         {
-            "{1525181F-901A-416C-8A58-119130FE478E}:_539030BF97964B27B68690CDD4F45759"
+            "{1525181F-901A-416C-8A58-119130FE478E}:_59399C78D1564711831FAFB638F1C5E4"
             {
             "Name" = "8:#1918"
             "AlwaysCreate" = "11:FALSE"
@@ -1564,25 +1538,25 @@
             "Property" = "8:PersonalFolder"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_21B16130F6FA4A679B05539B99559FE1"
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_91D58C95D4F34EC68E4D709B489949B8"
                     {
-                    "Name" = "8:WindowsPowershell"
+                    "Name" = "8:WindowsPowerShell"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
-                    "Property" = "8:_B69429373D6B4F0897FBEFC22820650C"
+                    "Property" = "8:_F0C18095679C429DA04443D9644A7AAD"
                         "Folders"
                         {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_C5940AD9F62742FE8369B745CA4A1C18"
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_9E14799C49B94690B237B2A59CF176E7"
                             {
                             "Name" = "8:Modules"
                             "AlwaysCreate" = "11:FALSE"
                             "Condition" = "8:"
                             "Transitive" = "11:FALSE"
-                            "Property" = "8:_EFB6AFE6F5D74159A4289A9AF295B4D2"
+                            "Property" = "8:_B8833B32673D42F5A39CE64D43485C9B"
                                 "Folders"
                                 {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_35F807E355BA4598A930E46299510CD8"
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_B574DEE14EDD41EE9B75978E17E64B9B"
                                     {
                                     "Name" = "8:GetCowsay"
                                     "AlwaysCreate" = "11:FALSE"
@@ -1639,7 +1613,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CowsaySharp Module"
         "ProductCode" = "8:{15A3B28D-F6D9-4A06-A948-D5B5762BE828}"
-        "PackageCode" = "8:{812F099E-13A1-42FA-94FD-1E8772EE0D8C}"
+        "PackageCode" = "8:{C94270D3-626D-4072-9F62-5B37AAE86FAB}"
         "UpgradeCode" = "8:{5A0D9320-2BC7-4167-A8FF-AC305EDCA263}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1656,7 +1630,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_F5E0FEB95F27462797861781E20F94DE"
+        "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -2158,12 +2132,12 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0F910554E2D745DDB1C7D40F5CE07739"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_6B57648030BD4BD4B2F08A7B94BA9798"
             {
             "SourcePath" = "8:..\\cmdlet\\Get-Cowsay\\obj\\Release\\CowsaySharp.GetCowsay.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_35F807E355BA4598A930E46299510CD8"
+            "Folder" = "8:_B574DEE14EDD41EE9B75978E17E64B9B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2178,7 +2152,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
+            "OutputConfiguration" = "8:Release|Any CPU"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{5D53A629-6577-4253-99EC-196D77EB1CC8}"
             "ShowKeyOutput" = "11:TRUE"
