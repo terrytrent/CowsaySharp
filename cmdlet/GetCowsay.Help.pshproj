@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<ModuleObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fVersion="1.1" type="Binary" mclass="External" useSupports="true">
+  <Name>GetCowsay</Name>
+  <Version>1.0</Version>
+  <Description>Generates ASCII pictures of a cow with a message</Description>
+  <ModulePath>C:\Users\ttrent\Source\Repos\cowsay_chsarp\cmdlet\Get-Cowsay\bin\Debug\GetCowsay.psd1</ModulePath>
+  <HasManifest>false</HasManifest>
+  <Provider>
+    <ProviderName>CodePlex</ProviderName>
+    <ProviderURL>https://www.codeplex.com/site/metaweblog</ProviderURL>
+    <Blog>
+      <blogid>CowsaySharpCmdlet</blogid>
+      <blogName>CowsaySharp.Cmdlet</blogName>
+      <url>https://cowsaysharpcmdlet.codeplex.com/</url>
+    </Blog>
+    <UserName>TerryTrent</UserName>
+    <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMq1OC6bkuU6DLity2qxmYgAAAAACAAAAAAADZgAAwAAAABAAAACgV4jXyK44pN6m+ZIrmUVQAAAAAASAAACgAAAAEAAAAGdkNbNW7j9MkP3Po6vCdrsgAAAA/epkdQD6Qtw+QDK/QwKLfmuZlcuWrkYO8ivW0KKsGu4UAAAA5r1Qv0tmC4QoBiVovStjy0tVH70=</Password>
+    <FetchPostCount>50</FetchPostCount>
+  </Provider>
+  <OverridePostCount>false</OverridePostCount>
+  <FetchPostCount xsi:nil="true" />
+  <Cmdlets>
+    <CmdletObject verb="Get" noun="Cowsay">
+      <Name>Get-Cowsay</Name>
+      <Syntax>
+        <string>Get-Cowsay [-mode &lt;String&gt; {borg | dead | greedy | paranoid | stoned | tired | wired | young} ] [-list] [-figlet] [-eyes &lt;String&gt;] [-tongue &lt;String&gt;] [-cowfile &lt;String&gt;] [-wrapcolumn &lt;Int32&gt;] [-think] [[-message] &lt;String&gt;]</string>
+      </Syntax>
+      <GeneralHelp>
+        <Synopsis>This cmdlet generates ASCII pictures of a cow with a message.</Synopsis>
+        <Description />
+        <Notes />
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType>String</ReturnType>
+        <ReturnUrl />
+        <ReturnTypeDescription />
+      </GeneralHelp>
+      <ParamSets>
+        <CommandParameterSetInfo2 Name="__AllParameterSets" Params="mode list figlet eyes tongue cowfile wrapcolumn think message Verbose Debug ErrorAction WarningAction InformationAction ErrorVariable WarningVariable InformationVariable OutVariable OutBuffer PipelineVariable" />
+      </ParamSets>
+      <Parameters>
+        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+          <Name>mode</Name>
+          <Description>Preset faces to select for the cow.
+
+Will override any eyes or tongue settings set manually.</Description>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.ValidateSetAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>m</string>
+          </Aliases>
+          <DefaultValue />
+        </ParameterDescription>
+        <ParameterDescription type="SwitchParameter" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+          <Name>list</Name>
+          <Description>List available cow files in module cows folder.</Description>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>l</string>
+          </Aliases>
+          <DefaultValue />
+        </ParameterDescription>
+        <ParameterDescription type="SwitchParameter" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+          <Name>figlet</Name>
+          <Description>Enable figlet mode for your message.
+
+Must escape special characters in order to work properly.</Description>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>n</string>
+          </Aliases>
+          <DefaultValue />
+        </ParameterDescription>
+        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+          <Name>eyes</Name>
+          <Description>Eyes for the cow, cannot be more than 2 characters long.  If more than 2 characters long, will be cut off.
+
+Overridden by the mode parameter.</Description>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>e</string>
+          </Aliases>
+          <DefaultValue />
+        </ParameterDescription>
+        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+          <Name>tongue</Name>
+          <Description>Tongue for the cow, cannot be more than 2 characters long.  If more than 2 characters long, will be cut off.
+
+Overridden by the mode parameter.</Description>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>T</string>
+          </Aliases>
+          <DefaultValue />
+        </ParameterDescription>
+        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+          <Name>cowfile</Name>
+          <Description>Specify either a specific cowfile found under the Module cows folder or a specific cowfile in a specific directory.</Description>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>f</string>
+          </Aliases>
+          <DefaultValue />
+        </ParameterDescription>
+        <ParameterDescription type="Int32" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+          <Name>wrapcolumn</Name>
+          <Description>Change the width of the speech bubble.  Cannot be less than 10 characters or more than 76 characters.</Description>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>W</string>
+          </Aliases>
+          <DefaultValue>40</DefaultValue>
+        </ParameterDescription>
+        <ParameterDescription type="SwitchParameter" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+          <Name>think</Name>
+          <Description>Make the cow think.</Description>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <DefaultValue />
+        </ParameterDescription>
+        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="true" pipeProp="false" isPos="true" pos="0" globbing="false" varLen="false">
+          <Name>message</Name>
+          <Description>What the cow says.</Description>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <DefaultValue />
+        </ParameterDescription>
+      </Parameters>
+      <Examples>
+        <Example>
+          <Name>Example 1</Name>
+          <Cmd>$message = 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.'
+
+Get-Cowsay -message $message</Cmd>
+          <Description>If you only speicfy the message parameter you will get a cow with a speech bubble 40 characters wide.</Description>
+          <Output>#  _______________________________________
+# / Four score and seven years ago our    \
+# | fathers brought forth on this         |
+# | continent, a new nation, conceived in |
+# | Liberty, and dedicated to the         |
+# | proposition that all men are created  |
+# \ equal.                                /
+#  ---------------------------------------
+# 
+#         \   ^__^
+#          \  (oo)\_______
+#             (__)\       )\/\
+#                 ||----w |
+#                 ||     ||</Output>
+        </Example>
+        <Example>
+          <Name>Example 2</Name>
+          <Cmd>$message = 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.'
+
+Get-Cowsay -wrapcolumn 20 -message $message</Cmd>
+          <Description>If you call the wrapcolumn paramter with a value less than 40 along with the message parameter you will get a cow with a speech bubble n characters in width.</Description>
+          <Output>#  ___________________
+# / Four score and    \
+# | seven years ago   |
+# | our fathers       |
+# | brought forth on  |
+# | this continent, a |
+# | new nation,       |
+# | conceived in      |
+# | Liberty, and      |
+# | dedicated to the  |
+# | proposition that  |
+# | all men are       |
+# \ created equal.    /
+#  -------------------
+# 
+#         \   ^__^
+#          \  (oo)\_______
+#             (__)\       )\/\
+#                 ||----w |
+#                 ||     ||</Output>
+        </Example>
+        <Example>
+          <Name>Example 3</Name>
+          <Cmd>$message = 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.'
+
+Get-Cowsay -wrapcolumn 60 -message $message</Cmd>
+          <Description>If you call the wrapcolumn paramter with a value greater than 40 along with the message parameter you will get a cow with a speech bubble n characters in width.</Description>
+          <Output>#  _____________________________________________________________
+# / Four score and seven years ago our fathers brought forth on \
+# | this continent, a new nation, conceived in Liberty, and     |
+# | dedicated to the proposition that all men are created       |
+# \ equal.                                                      /
+#  -------------------------------------------------------------
+# 
+#         \   ^__^
+#          \  (oo)\_______
+#             (__)\       )\/\
+#                 ||----w |
+#                 ||     ||</Output>
+        </Example>
+        <Example>
+          <Name>Example 4</Name>
+          <Cmd>$message = 'What was I thinking!?'
+
+Get-Cowsay -think -message $message</Cmd>
+          <Description>If you call the think paramter along with the message parameter you will get a cow with a think bubble instead of a speech bubble.</Description>
+          <Output>#  _______________________ 
+# ( What was I thinking!? )
+#  -----------------------
+#         o   ^__^
+#          o  (oo)\_______
+#             (__)\       )\/\
+#                 ||----w |
+#                 ||     ||</Output>
+        </Example>
+        <Example>
+          <Name>Example 5</Name>
+          <Cmd>$message = 'Resistance is Mootile!'
+
+Get-Cowsay -mode borg -message $message</Cmd>
+          <Description>If you call the mode paramter, with a value, along with the message parameter your cows Eyes and Tongue will change according to the mode you speicfied.</Description>
+          <Output>#  ________________________ 
+# &lt; Resistance is Mootile! &gt;
+#  ------------------------
+#         \   ^__^
+#          \  (==)\_______
+#             (__)\       )\/\
+#                 ||----w |
+#                 ||     ||</Output>
+        </Example>
+        <Example>
+          <Name>Example 6</Name>
+          <Cmd>$message = 'Stars in my eyes!'
+
+Get-Cowsay -eyes ** -tongue ' U' -message $message</Cmd>
+          <Description>If you call the Eyes and/or Tongue paramter(s), with a value, along with the message parameter your cows Eyes and Tongue will change according to the values you specified.</Description>
+          <Output>#  ___________________ 
+# &lt; Stars in my eyes! &gt;
+#  -------------------
+#         \   ^__^
+#          \  (**)\_______
+#             (__)\       )\/\
+#               U ||----w |
+#                 ||     ||</Output>
+        </Example>
+        <Example>
+          <Name>Example 7</Name>
+          <Cmd>$message = 'Brrrrrrr!'
+
+Get-Cowsay -cowfile tux -message $message</Cmd>
+          <Description>If you call the cowfile paramter, with a value, along with the message parameter you will get the ascii art associated with that value.
+
+To see a list of available cowfile values use Get-Cowsay -list.</Description>
+          <Output>#  ___________ 
+# &lt; Brrrrrrr! &gt;
+#  -----------
+#    \
+#     \
+#         .--.
+#        |o_o |
+#        |:_/ |
+#       //   \ \
+#      (|     | )
+#     /'\_   _/`\
+#     \___)=(___/</Output>
+        </Example>
+        <Example>
+          <Name>Example 8</Name>
+          <Cmd>$directory = (get-location).path
+$message = 'Hippity Hoppity Easter is on the way!'
+
+Get-Cowsay -cowfile $directory\bunny -message $message</Cmd>
+          <Description>If you call the cowfile paramter, with a full path to a cowfile, along with the message parameter you will get the ascii art associated with that cowfile.</Description>
+          <Output>#  _______________________________________ 
+# &lt; Hippity Hoppity Easter is on the way! &gt;
+#  ---------------------------------------
+#   \
+#    \   \
+#         \ /\
+#         ( )
+#       .( o ).</Output>
+        </Example>
+        <Example>
+          <Name>Example 9</Name>
+          <Cmd>$message = @"
+ _ _ _          _   _     _     
+| (_) | _____  | |_| |__ (_)___ 
+| | | |/ / _ \ | __| '_ \| / __|
+| | |   &lt;  __/ | |_| | | | \__ \
+|_|_|_|\_\___|  \__|_| |_|_|___/
+"@
+
+Get-Cowsay -figlet -message $message</Cmd>
+          <Description>If you call the figlet paramter you can specify a figlet for your message.
+
+It is recommended you store your figlet in a Here-String variable and pass that variable to your message.</Description>
+          <Output>#  __________________________________
+# /  _ _ _          _   _     _      \
+# | | (_) | _____  | |_| |__ (_)___  |
+# | | | | |/ / _ \ | __| '_ \| / __| |
+# | | | |   &lt;  __/ | |_| | | | \__ \ |
+# \ |_|_|_|\_\___|  \__|_| |_|_|___/ /
+#  ----------------------------------
+# 
+#         \   ^__^
+#          \  (oo)\_______
+#             (__)\       )\/\
+#                 ||----w |
+#                 ||     ||</Output>
+        </Example>
+        <Example>
+          <Name>Example 10</Name>
+          <Cmd>$message = @"
+                          .   oooo         o8o           
+                        .o8   ``888         ``"'           
+ .ooooo.  oooo d8b    .o888oo  888 .oo.   oooo   .oooo.o 
+d88' ``88b ``888""8P      888    888P"Y88b  ``888  d88(  "8 
+888   888  888          888    888   888   888  ``"Y88b.  
+888   888  888          888 .  888   888   888  o.  )88b 
+``Y8bod8P' d888b         "888" o888o o888o o888o 8""888P' 
+"@
+
+Get-Cowsay -figlet -message $message</Cmd>
+          <Description>If you call the figlet paramter you can specify a figlet for your message.
+
+It is recommended you store your figlet in a Here-String variable and pass that variable to your message.
+
+If your figlet has special characters, such as the tick(`) character, you must escape the special character as seen in the example.</Description>
+          <Output>#  ___________________________________________________________
+# /                           .   oooo         o8o            \
+# |                         .o8   `888         `"'            |
+# |  .ooooo.  oooo d8b    .o888oo  888 .oo.   oooo   .oooo.o  |
+# | d88' `88b `888""8P      888    888P"Y88b  `888  d88(  "8  |
+# | 888   888  888          888    888   888   888  `"Y88b.   |
+# | 888   888  888          888 .  888   888   888  o.  )88b  |
+# \ `Y8bod8P' d888b         "888" o888o o888o o888o 8""888P'  /
+#  -----------------------------------------------------------
+# 
+#         \   ^__^
+#          \  (oo)\_______
+#             (__)\       )\/\
+#                 ||----w |
+#                 ||     ||</Output>
+        </Example>
+      </Examples>
+      <RelatedLinks />
+      <SupportInformation ad="false" rsat="false" ps2="false" ps3="false" ps4="false" ps5="false" wxp="false" wv="false" w7="false" w8="false" w81="false" w10="false" w2k3s="false" w2k3e="false" w2k3d="false" w2k8s="false" w2k8e="false" w2k8d="false" w2k8r2s="false" w2k8r2e="false" w2k8r2d="false" w2k12s="false" w2k12d="false" w2k12r2s="false" w2k12r2d="false" />
+      <Publish>true</Publish>
+      <URL>https://cowsaysharpcmdlet.codeplex.com/wikipage?title=Get-Cowsay</URL>
+      <ArticleIDString>704687</ArticleIDString>
+    </CmdletObject>
+  </Cmdlets>
+</ModuleObject>
