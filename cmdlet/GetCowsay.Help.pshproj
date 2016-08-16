@@ -29,7 +29,7 @@
         <Synopsis>This cmdlet generates ASCII pictures of a cow with a message.</Synopsis>
         <Description />
         <Notes />
-        <InputType />
+        <InputType>String</InputType>
         <InputUrl />
         <InputTypeDescription />
         <ReturnType>String</ReturnType>
@@ -40,11 +40,8 @@
         <CommandParameterSetInfo2 Name="__AllParameterSets" Params="mode list figlet eyes tongue cowfile wrapcolumn think message Verbose Debug ErrorAction WarningAction InformationAction ErrorVariable WarningVariable InformationVariable OutVariable OutBuffer PipelineVariable" />
       </ParamSets>
       <Parameters>
-        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+        <ParameterDescription type="String" varLen="false" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false">
           <Name>mode</Name>
-          <Description>Preset faces to select for the cow.
-
-Will override any eyes or tongue settings set manually.</Description>
           <Attributes>
             <string>System.Management.Automation.ParameterAttribute</string>
             <string>System.Management.Automation.ValidateSetAttribute</string>
@@ -53,11 +50,13 @@ Will override any eyes or tongue settings set manually.</Description>
           <Aliases>
             <string>m</string>
           </Aliases>
+          <Description>Preset faces to select for the cow.
+
+Will override any eyes or tongue settings set manually.</Description>
           <DefaultValue />
         </ParameterDescription>
-        <ParameterDescription type="SwitchParameter" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+        <ParameterDescription type="SwitchParameter" varLen="false" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false">
           <Name>list</Name>
-          <Description>List available cow files in module cows folder.</Description>
           <Attributes>
             <string>System.Management.Automation.ParameterAttribute</string>
             <string>System.Management.Automation.AliasAttribute</string>
@@ -65,13 +64,11 @@ Will override any eyes or tongue settings set manually.</Description>
           <Aliases>
             <string>l</string>
           </Aliases>
+          <Description>List available cow files in module cows folder.</Description>
           <DefaultValue />
         </ParameterDescription>
-        <ParameterDescription type="SwitchParameter" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+        <ParameterDescription type="SwitchParameter" varLen="false" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false">
           <Name>figlet</Name>
-          <Description>Enable figlet mode for your message.
-
-Must escape special characters in order to work properly.</Description>
           <Attributes>
             <string>System.Management.Automation.ParameterAttribute</string>
             <string>System.Management.Automation.AliasAttribute</string>
@@ -79,13 +76,13 @@ Must escape special characters in order to work properly.</Description>
           <Aliases>
             <string>n</string>
           </Aliases>
+          <Description>Enable figlet mode for your message.
+
+Must escape special characters in order to work properly.</Description>
           <DefaultValue />
         </ParameterDescription>
-        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+        <ParameterDescription type="String" varLen="false" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false">
           <Name>eyes</Name>
-          <Description>Eyes for the cow, cannot be more than 2 characters long.  If more than 2 characters long, will be cut off.
-
-Overridden by the mode parameter.</Description>
           <Attributes>
             <string>System.Management.Automation.ParameterAttribute</string>
             <string>System.Management.Automation.AliasAttribute</string>
@@ -93,13 +90,13 @@ Overridden by the mode parameter.</Description>
           <Aliases>
             <string>e</string>
           </Aliases>
-          <DefaultValue />
-        </ParameterDescription>
-        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
-          <Name>tongue</Name>
-          <Description>Tongue for the cow, cannot be more than 2 characters long.  If more than 2 characters long, will be cut off.
+          <Description>Eyes for the cow, cannot be more than 2 characters long.  If more than 2 characters long, will be cut off.
 
 Overridden by the mode parameter.</Description>
+          <DefaultValue />
+        </ParameterDescription>
+        <ParameterDescription type="String" varLen="false" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false">
+          <Name>tongue</Name>
           <Attributes>
             <string>System.Management.Automation.ParameterAttribute</string>
             <string>System.Management.Automation.AliasAttribute</string>
@@ -107,11 +104,13 @@ Overridden by the mode parameter.</Description>
           <Aliases>
             <string>T</string>
           </Aliases>
+          <Description>Tongue for the cow, cannot be more than 2 characters long.  If more than 2 characters long, will be cut off.
+
+Overridden by the mode parameter.</Description>
           <DefaultValue />
         </ParameterDescription>
-        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+        <ParameterDescription type="String" varLen="false" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false">
           <Name>cowfile</Name>
-          <Description>Specify either a specific cowfile found under the Module cows folder or a specific cowfile in a specific directory.</Description>
           <Attributes>
             <string>System.Management.Automation.ParameterAttribute</string>
             <string>System.Management.Automation.AliasAttribute</string>
@@ -119,11 +118,11 @@ Overridden by the mode parameter.</Description>
           <Aliases>
             <string>f</string>
           </Aliases>
+          <Description>Specify either a specific cowfile found under the Module cows folder or a specific cowfile in a specific directory.</Description>
           <DefaultValue />
         </ParameterDescription>
-        <ParameterDescription type="Int32" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+        <ParameterDescription type="Int32" varLen="false" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false">
           <Name>wrapcolumn</Name>
-          <Description>Change the width of the speech bubble.  Cannot be less than 10 characters or more than 76 characters.</Description>
           <Attributes>
             <string>System.Management.Automation.ParameterAttribute</string>
             <string>System.Management.Automation.AliasAttribute</string>
@@ -131,24 +130,25 @@ Overridden by the mode parameter.</Description>
           <Aliases>
             <string>W</string>
           </Aliases>
+          <Description>Change the width of the speech bubble.  Cannot be less than 10 characters or more than 76 characters.</Description>
           <DefaultValue>40</DefaultValue>
         </ParameterDescription>
-        <ParameterDescription type="SwitchParameter" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false" varLen="false">
+        <ParameterDescription type="SwitchParameter" varLen="false" required="false" dynamic="false" pipeRemaining="false" pipe="false" pipeProp="false" isPos="false" pos="named" globbing="false">
           <Name>think</Name>
-          <Description>Make the cow think.</Description>
           <Attributes>
             <string>System.Management.Automation.ParameterAttribute</string>
           </Attributes>
           <Aliases />
+          <Description>Make the cow think.</Description>
           <DefaultValue />
         </ParameterDescription>
-        <ParameterDescription type="String" required="false" dynamic="false" pipeRemaining="false" pipe="true" pipeProp="false" isPos="true" pos="0" globbing="false" varLen="false">
+        <ParameterDescription type="String" varLen="false" required="false" dynamic="false" pipeRemaining="false" pipe="true" pipeProp="false" isPos="true" pos="0" globbing="false">
           <Name>message</Name>
-          <Description>What the cow says.</Description>
           <Attributes>
             <string>System.Management.Automation.ParameterAttribute</string>
           </Attributes>
           <Aliases />
+          <Description>What the cow says.</Description>
           <DefaultValue />
         </ParameterDescription>
       </Parameters>
@@ -365,8 +365,25 @@ If your figlet has special characters, such as the tick(`) character, you must e
 #                 ||     ||</Output>
         </Example>
       </Examples>
-      <RelatedLinks />
-      <SupportInformation ad="false" rsat="false" ps2="false" ps3="false" ps4="false" ps5="false" wxp="false" wv="false" w7="false" w8="false" w81="false" w10="false" w2k3s="false" w2k3e="false" w2k3d="false" w2k8s="false" w2k8e="false" w2k8d="false" w2k8r2s="false" w2k8r2e="false" w2k8r2d="false" w2k12s="false" w2k12d="false" w2k12r2s="false" w2k12r2d="false" />
+      <RelatedLinks>
+        <RelatedLink>
+          <LinkText>https://cowsaysharp.codeplex.com/</LinkText>
+          <LinkUrl />
+        </RelatedLink>
+        <RelatedLink>
+          <LinkText>https://github.com/terrytrent/CowsaySharp</LinkText>
+          <LinkUrl />
+        </RelatedLink>
+        <RelatedLink>
+          <LinkText>https://github.com/piuccio/cowsay</LinkText>
+          <LinkUrl />
+        </RelatedLink>
+        <RelatedLink>
+          <LinkText>&lt;Link&gt;</LinkText>
+          <LinkUrl />
+        </RelatedLink>
+      </RelatedLinks>
+      <SupportInformation ad="false" rsat="false" ps2="false" ps3="false" ps4="false" ps5="true" wxp="false" wv="false" w7="false" w8="false" w81="false" w10="false" w2k3s="false" w2k3e="false" w2k3d="false" w2k8s="false" w2k8e="false" w2k8d="false" w2k8r2s="false" w2k8r2e="false" w2k8r2d="false" w2k12s="false" w2k12d="false" w2k12r2s="false" w2k12r2d="false" />
       <Publish>true</Publish>
       <URL>https://cowsaysharpcmdlet.codeplex.com/wikipage?title=Get-Cowsay</URL>
       <ArticleIDString>704687</ArticleIDString>
