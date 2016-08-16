@@ -66,7 +66,7 @@ namespace CowsaySharp.GetCowsay
 
         protected override void BeginProcessing()
         {
-            moduleDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); ;
+            moduleDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             cowFileLocation = $"{moduleDirectory}\\cows";
             cowSpecified = $"{cowFileLocation}\\default.cow";
             face = new CowFace();

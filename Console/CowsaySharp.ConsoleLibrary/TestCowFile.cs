@@ -17,7 +17,7 @@ namespace CowsaySharp.ConsoleLibrary
             {
                 string cowFile = cowSpecified.Substring(cowSpecified.LastIndexOf('\\') + 1);
 
-                if (cowSpecified.Substring(0, 1) == "\\")
+                if (cowSpecified.Substring(0, 1) == "\\" && cowSpecified.Substring(0, 2) != "\\\\")
                 {
                     directory = $"{Directory.GetCurrentDirectory()}{cowSpecified.Substring(0, cowSpecified.IndexOf(cowFile))}";
                     cowSpecified = $"{directory}{cowFile}";

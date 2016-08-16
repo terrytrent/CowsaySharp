@@ -19,7 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cmndlet", "cmndlet", "{1CC1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CowsaySharp.GetCowsay", "cmdlet\Get-Cowsay\CowsaySharp.GetCowsay.csproj", "{5D53A629-6577-4253-99EC-196D77EB1CC8}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{D88D8BF7-48D6-462F-B7DB-C96F2A7482CB}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FullInstaller", "Installer\Installer.vdproj", "{D88D8BF7-48D6-462F-B7DB-C96F2A7482CB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ModuleInstaller", "ModuleInstaller\ModuleInstaller.vdproj", "{D7DEA382-21EE-471F-9414-9723FC036BFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,9 @@ Global
 		{D88D8BF7-48D6-462F-B7DB-C96F2A7482CB}.CowsaySharp Release|Any CPU.ActiveCfg = Release
 		{D88D8BF7-48D6-462F-B7DB-C96F2A7482CB}.Debug|Any CPU.ActiveCfg = Debug
 		{D88D8BF7-48D6-462F-B7DB-C96F2A7482CB}.Release|Any CPU.ActiveCfg = Release
+		{D7DEA382-21EE-471F-9414-9723FC036BFC}.CowsaySharp Release|Any CPU.ActiveCfg = Release
+		{D7DEA382-21EE-471F-9414-9723FC036BFC}.Debug|Any CPU.ActiveCfg = Debug
+		{D7DEA382-21EE-471F-9414-9723FC036BFC}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

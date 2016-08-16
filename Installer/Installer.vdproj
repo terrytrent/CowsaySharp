@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Installer"
+"ProjectName" = "8:FullInstaller"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -256,13 +256,13 @@
         "Entry"
         {
         "MsmKey" = "8:_59E9E23BB122869CFED98B35AE93A287"
-        "OwnerKey" = "8:_6B311E1231C541B0909C112B54F21C58"
+        "OwnerKey" = "8:_6DB9002B1FB64B2F9FC121CD788CF484"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_59E9E23BB122869CFED98B35AE93A287"
-        "OwnerKey" = "8:_6DB9002B1FB64B2F9FC121CD788CF484"
+        "OwnerKey" = "8:_6B311E1231C541B0909C112B54F21C58"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -658,7 +658,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_59E9E23BB122869CFED98B35AE93A287"
+        "OwnerKey" = "8:_2C2DEE223F4C4351A8450BCFE3C3C301"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6DB9002B1FB64B2F9FC121CD788CF484"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -682,13 +688,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6DB9002B1FB64B2F9FC121CD788CF484"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2C2DEE223F4C4351A8450BCFE3C3C301"
+        "OwnerKey" = "8:_59E9E23BB122869CFED98B35AE93A287"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -709,6 +709,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -725,6 +733,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
