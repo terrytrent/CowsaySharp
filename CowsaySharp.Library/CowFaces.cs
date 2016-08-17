@@ -28,7 +28,7 @@ namespace CowsaySharp.Library
         static private CowFace wired { get; set; }
         static private CowFace young { get; set; }
 
-        static public CowFace getCowFace(cowFaces face)
+        static public CowFace GetCowFace(cowFaces face)
         {
             populateFacesDictionary();
             CowFace value = new CowFace();

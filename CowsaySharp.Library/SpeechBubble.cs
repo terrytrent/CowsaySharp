@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CowsaySharp.Library
 {
-    public class SpeechBubble
+    static public class SpeechBubble
     {
         
         static public string ReturnSpeechBubble(string message)
@@ -20,11 +20,11 @@ namespace CowsaySharp.Library
             List<string> messageAsList = new List<string>();
             if (think)
             {
-                bubbles.setBubbles(Bubbles.bubbleType.think);
+                bubbles.SetBubbles(Bubbles.bubbleType.think);
             }
             else
             {
-                bubbles.setBubbles(Bubbles.bubbleType.say);
+                bubbles.SetBubbles(Bubbles.bubbleType.say);
             }
 
             if (!maxLineLength.HasValue)

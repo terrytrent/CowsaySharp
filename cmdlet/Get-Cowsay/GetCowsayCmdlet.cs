@@ -76,28 +76,28 @@ namespace CowsaySharp.GetCowsay
                 switch (mode)
                 {
                     case "borg":
-                        face = CowFaces.getCowFace(CowFaces.cowFaces.borg);
+                        face = CowFaces.GetCowFace(CowFaces.cowFaces.borg);
                         break;
                     case "dead":
-                        face = CowFaces.getCowFace(CowFaces.cowFaces.dead);
+                        face = CowFaces.GetCowFace(CowFaces.cowFaces.dead);
                         break;
                     case "greedy":
-                        face = CowFaces.getCowFace(CowFaces.cowFaces.greedy);
+                        face = CowFaces.GetCowFace(CowFaces.cowFaces.greedy);
                         break;
                     case "paranoid":
-                        face = CowFaces.getCowFace(CowFaces.cowFaces.paranoid);
+                        face = CowFaces.GetCowFace(CowFaces.cowFaces.paranoid);
                         break;
                     case "stoned":
-                        face = CowFaces.getCowFace(CowFaces.cowFaces.stoned);
+                        face = CowFaces.GetCowFace(CowFaces.cowFaces.stoned);
                         break;
                     case "tired":
-                        face = CowFaces.getCowFace(CowFaces.cowFaces.tired);
+                        face = CowFaces.GetCowFace(CowFaces.cowFaces.tired);
                         break;
                     case "wired":
-                        face = CowFaces.getCowFace(CowFaces.cowFaces.wired);
+                        face = CowFaces.GetCowFace(CowFaces.cowFaces.wired);
                         break;
                     case "young":
-                        face = CowFaces.getCowFace(CowFaces.cowFaces.young);
+                        face = CowFaces.GetCowFace(CowFaces.cowFaces.young);
                         break;
                 }
             }
@@ -106,7 +106,7 @@ namespace CowsaySharp.GetCowsay
                 face = new CowFace(eyes);
 
             if (String.IsNullOrEmpty(face.Eyes))
-                face = CowFaces.getCowFace(CowFaces.cowFaces.defaultFace);
+                face = CowFaces.GetCowFace(CowFaces.cowFaces.defaultFace);
 
             if (!String.IsNullOrEmpty(tongue) && String.IsNullOrWhiteSpace(face.Tongue))
                 face.Tongue = tongue;

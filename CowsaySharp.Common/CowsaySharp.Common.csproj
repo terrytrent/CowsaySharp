@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CowsaySharp.Common</RootNamespace>
-    <AssemblyName>CowsaySharp.Common</AssemblyName>
+    <AssemblyName>Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CowsaySharp Release|AnyCPU'">
-    <OutputPath>..\Console\Builds\CowsaySharp\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\VSBuilds\Release\CowsaySharp.Common\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>

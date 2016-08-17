@@ -22,7 +22,7 @@ namespace CowsaySharp.ConsoleLibrary
 
             StringBuilder message = new StringBuilder();
 
-            CowFace face = CowFaces.getCowFace(CowFaces.cowFaces.defaultFace);
+            CowFace face = CowFaces.GetCowFace(CowFaces.cowFaces.defaultFace);
 
             int numberOfArguments = args.Length;
             int columnSize = 40;
@@ -59,7 +59,7 @@ namespace CowsaySharp.ConsoleLibrary
                             if (!presetFaceSet)
                                 presetFaceSet = true;
 
-                            face = CowFaces.getCowFace(CowFaces.cowFaces.borg);
+                            face = CowFaces.GetCowFace(CowFaces.cowFaces.borg);
 
                             break;
                         case 'd':
@@ -69,7 +69,7 @@ namespace CowsaySharp.ConsoleLibrary
                             if (!presetFaceSet)
                                 presetFaceSet = true;
 
-                            face = CowFaces.getCowFace(CowFaces.cowFaces.dead);
+                            face = CowFaces.GetCowFace(CowFaces.cowFaces.dead);
 
                             break;
                         case 'g':
@@ -79,7 +79,7 @@ namespace CowsaySharp.ConsoleLibrary
                             if (!presetFaceSet)
                                 presetFaceSet = true;
 
-                            face = CowFaces.getCowFace(CowFaces.cowFaces.greedy);
+                            face = CowFaces.GetCowFace(CowFaces.cowFaces.greedy);
 
                             break;
                         case 'p':
@@ -89,7 +89,7 @@ namespace CowsaySharp.ConsoleLibrary
                             if (!presetFaceSet)
                                 presetFaceSet = true;
 
-                            face = CowFaces.getCowFace(CowFaces.cowFaces.paranoid);
+                            face = CowFaces.GetCowFace(CowFaces.cowFaces.paranoid);
 
                             break;
                         case 's':
@@ -99,7 +99,7 @@ namespace CowsaySharp.ConsoleLibrary
                             if (!presetFaceSet)
                                 presetFaceSet = true;
 
-                            face = CowFaces.getCowFace(CowFaces.cowFaces.stoned);
+                            face = CowFaces.GetCowFace(CowFaces.cowFaces.stoned);
 
                             break;
                         case 't':
@@ -109,7 +109,7 @@ namespace CowsaySharp.ConsoleLibrary
                             if (!presetFaceSet)
                                 presetFaceSet = true;
 
-                            face = CowFaces.getCowFace(CowFaces.cowFaces.tired);
+                            face = CowFaces.GetCowFace(CowFaces.cowFaces.tired);
 
                             break;
                         case 'w':
@@ -119,7 +119,7 @@ namespace CowsaySharp.ConsoleLibrary
                             if (!presetFaceSet)
                                 presetFaceSet = true;
 
-                            face = CowFaces.getCowFace(CowFaces.cowFaces.wired);
+                            face = CowFaces.GetCowFace(CowFaces.cowFaces.wired);
 
                             break;
                         case 'y':
@@ -129,7 +129,7 @@ namespace CowsaySharp.ConsoleLibrary
                             if (!presetFaceSet)
                                 presetFaceSet = true;
 
-                            face = CowFaces.getCowFace(CowFaces.cowFaces.young);
+                            face = CowFaces.GetCowFace(CowFaces.cowFaces.young);
 
                             break;
                         case 'e':

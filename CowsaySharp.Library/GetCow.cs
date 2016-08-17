@@ -22,11 +22,11 @@ namespace CowsaySharp.Library
 
             if (think)
             {
-                bubbles.setBubbles(Bubbles.bubbleType.think);
+                bubbles.SetBubbles(Bubbles.bubbleType.think);
             }
             else
             {
-                bubbles.setBubbles(Bubbles.bubbleType.say);
+                bubbles.SetBubbles(Bubbles.bubbleType.say);
             }
 
             cow.Replace("\\\\", "\\");

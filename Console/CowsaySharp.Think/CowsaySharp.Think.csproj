@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CowsaySharp Release|AnyCPU'">
-    <OutputPath>..\Builds\CowsaySharp\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\..\VSBuilds\Release\CowsaySharp.Think\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -52,6 +52,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CowsaySharp.Think.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,6 +67,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\cowsaysharp.common\StringArrayOfFilesToList.cs">
+      <Link>CowsaySharp.Common\StringArrayOfFilesToList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\cowsaysharp.common\ValidateDirectory.cs">
+      <Link>CowsaySharp.Common\ValidateDirectory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\cowsaysharp.common\ValidateFile.cs">
+      <Link>CowsaySharp.Common\ValidateFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\cowsaysharp.library\Bubbles.cs">
+      <Link>CowsaySharp.Library\Bubbles.cs</Link>
+    </Compile>
+    <Compile Include="..\..\cowsaysharp.library\CowFace.cs">
+      <Link>CowsaySharp.Library\CowFace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\cowsaysharp.library\CowFaces.cs">
+      <Link>CowsaySharp.Library\CowFaces.cs</Link>
+    </Compile>
+    <Compile Include="..\..\cowsaysharp.library\GetCow.cs">
+      <Link>CowsaySharp.Library\GetCow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\cowsaysharp.library\SpeechBubble.cs">
+      <Link>CowsaySharp.Library\SpeechBubble.cs</Link>
+    </Compile>
     <Compile Include="..\cowsaysharp.consolelibrary\Help.cs">
       <Link>CowsaySharp.ConsoleLibrary\Help.cs</Link>
     </Compile>
@@ -76,14 +103,6 @@
     <Compile Include="..\cowsaysharp.consolelibrary\TestCowFile.cs">
       <Link>CowsaySharp.ConsoleLibrary\TestCowFile.cs</Link>
     </Compile>
-    <Compile Include="CowsaySharp.Common\StringArrayOfFilesToList.cs" />
-    <Compile Include="CowsaySharp.Common\validateDirectory.cs" />
-    <Compile Include="CowsaySharp.Common\validateFile.cs" />
-    <Compile Include="CowsaySharp.Library\Bubbles.cs" />
-    <Compile Include="CowsaySharp.Library\CowFace.cs" />
-    <Compile Include="CowsaySharp.Library\CowFaces.cs" />
-    <Compile Include="CowsaySharp.Library\GetCow.cs" />
-    <Compile Include="CowsaySharp.Library\SpeechBubble.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

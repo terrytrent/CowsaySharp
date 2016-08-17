@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CowsaySharp.ConsoleLibrary</RootNamespace>
-    <AssemblyName>CowsaySharp.ConsoleLibrary</AssemblyName>
+    <AssemblyName>ConsoleLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,7 +36,7 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CowsaySharp Release|AnyCPU'">
-    <OutputPath>..\Builds\CowsaySharp\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\..\VSBuilds\Release\CowsaySharp.ConsoleLibrary\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>

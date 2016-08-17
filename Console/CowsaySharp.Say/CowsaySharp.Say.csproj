@@ -58,7 +58,7 @@
     <StartupObject>CowsaySharp.Say.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CowsaySharp Release|AnyCPU'">
-    <OutputPath>..\Builds\CowsaySharp\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\..\VSBuilds\Release\CowsaySharp.Say\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>none</DebugType>

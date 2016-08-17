@@ -19,9 +19,7 @@
         public bubbleType Type { get; private set; }
         public string Bubble { get; private set; }
 
-        public Bubbles() { }
-
-        public void setBubbles(bubbleType type)
+        public void SetBubbles(bubbleType type)
         {
             Type = type;
             if (Type == bubbleType.say)

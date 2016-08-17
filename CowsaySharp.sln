@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CowsaySharp.ConsoleLibrary", "Console\CowsaySharp.ConsoleLibrary\CowsaySharp.ConsoleLibrary.csproj", "{BC1058D1-4A6A-499F-9FE8-B5C9CF47976A}"
 EndProject
@@ -44,6 +44,7 @@ Global
 		{D6582C02-D591-42B6-A74A-278B34B66159}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6582C02-D591-42B6-A74A-278B34B66159}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AC89FBC-5AE9-4B03-86BA-E1D83BE4C612}.CowsaySharp Release|Any CPU.ActiveCfg = CowsaySharp Release|Any CPU
+		{7AC89FBC-5AE9-4B03-86BA-E1D83BE4C612}.CowsaySharp Release|Any CPU.Build.0 = CowsaySharp Release|Any CPU
 		{7AC89FBC-5AE9-4B03-86BA-E1D83BE4C612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7AC89FBC-5AE9-4B03-86BA-E1D83BE4C612}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AC89FBC-5AE9-4B03-86BA-E1D83BE4C612}.Release|Any CPU.ActiveCfg = Release|Any CPU
