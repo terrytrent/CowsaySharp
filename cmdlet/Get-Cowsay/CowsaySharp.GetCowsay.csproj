@@ -89,194 +89,194 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\CowsaySharp.Library\cows\beavis.zen.cow">
+    <Content Include="..\..\CowsaySharp.Library\cows\beavis.zen.cow">
       <Link>cows\beavis.zen.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\bong.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\bong.cow">
       <Link>cows\bong.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\bud-frogs.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\bud-frogs.cow">
       <Link>cows\bud-frogs.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\bunny.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\bunny.cow">
       <Link>cows\bunny.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\cheese.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\cheese.cow">
       <Link>cows\cheese.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\cower.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\cower.cow">
       <Link>cows\cower.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\daemon.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\daemon.cow">
       <Link>cows\daemon.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\default.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\default.cow">
       <Link>cows\default.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\dragon-and-cow.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\dragon-and-cow.cow">
       <Link>cows\dragon-and-cow.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\dragon.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\dragon.cow">
       <Link>cows\dragon.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\elephant-in-snake.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\elephant-in-snake.cow">
       <Link>cows\elephant-in-snake.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\elephant.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\elephant.cow">
       <Link>cows\elephant.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\eyes.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\eyes.cow">
       <Link>cows\eyes.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\flaming-sheep.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\flaming-sheep.cow">
       <Link>cows\flaming-sheep.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\ghostbusters.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\ghostbusters.cow">
       <Link>cows\ghostbusters.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\head-in.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\head-in.cow">
       <Link>cows\head-in.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\hellokitty.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\hellokitty.cow">
       <Link>cows\hellokitty.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\kiss.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\kiss.cow">
       <Link>cows\kiss.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\kitty.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\kitty.cow">
       <Link>cows\kitty.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\koala.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\koala.cow">
       <Link>cows\koala.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\kosh.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\kosh.cow">
       <Link>cows\kosh.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\luke-koala.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\luke-koala.cow">
       <Link>cows\luke-koala.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\meow.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\meow.cow">
       <Link>cows\meow.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\milk.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\milk.cow">
       <Link>cows\milk.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\moofasa.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\moofasa.cow">
       <Link>cows\moofasa.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\moose.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\moose.cow">
       <Link>cows\moose.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\mutilated.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\mutilated.cow">
       <Link>cows\mutilated.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\ren.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\ren.cow">
       <Link>cows\ren.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\satanic.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\satanic.cow">
       <Link>cows\satanic.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\sheep.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\sheep.cow">
       <Link>cows\sheep.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\skeleton.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\skeleton.cow">
       <Link>cows\skeleton.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\small.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\small.cow">
       <Link>cows\small.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\sodomized.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\sodomized.cow">
       <Link>cows\sodomized.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\squirrel.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\squirrel.cow">
       <Link>cows\squirrel.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\stegosaurus.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\stegosaurus.cow">
       <Link>cows\stegosaurus.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\stimpy.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\stimpy.cow">
       <Link>cows\stimpy.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\supermilker.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\supermilker.cow">
       <Link>cows\supermilker.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\surgery.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\surgery.cow">
       <Link>cows\surgery.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\telebears.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\telebears.cow">
       <Link>cows\telebears.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\three-eyes.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\three-eyes.cow">
       <Link>cows\three-eyes.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\turkey.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\turkey.cow">
       <Link>cows\turkey.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\turtle.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\turtle.cow">
       <Link>cows\turtle.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\tux.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\tux.cow">
       <Link>cows\tux.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\udder.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\udder.cow">
       <Link>cows\udder.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\vader-koala.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\vader-koala.cow">
       <Link>cows\vader-koala.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\vader.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\vader.cow">
       <Link>cows\vader.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\CowsaySharp.Library\cows\www.cow">
+    </Content>
+    <Content Include="..\..\CowsaySharp.Library\cows\www.cow">
       <Link>cows\www.cow</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <Content Include="CowsaySharp.format.ps1xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
