@@ -346,12 +346,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_850A39C2AEA47FF97229A95B4310C961"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6B57648030BD4BD4B2F08A7B94BA9798"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -365,6 +359,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_0DE82CD43584CAC22C08D056C8F6E1A7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_850A39C2AEA47FF97229A95B4310C961"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -385,13 +385,21 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\CowsaySharpModule.msi"
+        "OutputFilename" = "8:Release\\CowsaySharp PowerShell Module 1.0.1.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -401,6 +409,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -1611,20 +1635,20 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:CowsaySharp Module"
+        "ProductName" = "8:CowsaySharp PowerShell Module"
         "ProductCode" = "8:{15A3B28D-F6D9-4A06-A948-D5B5762BE828}"
         "PackageCode" = "8:{C94270D3-626D-4072-9F62-5B37AAE86FAB}"
         "UpgradeCode" = "8:{5A0D9320-2BC7-4167-A8FF-AC305EDCA263}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:TrentAtHome.com"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:"
-        "Title" = "8:CowsaySharp Module Installer"
+        "ARPHELPLINK" = "8:https://cowsaysharp.codeplex.com/"
+        "Title" = "8:CowsaySharp PowerShell Module Installer"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Terry Trent"
         "Keywords" = "8:"
@@ -2134,7 +2158,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_6B57648030BD4BD4B2F08A7B94BA9798"
             {
-            "SourcePath" = "8:..\\cmdlet\\Get-Cowsay\\obj\\Release\\CowsaySharp.GetCowsay.dll"
+            "SourcePath" = "8:..\\cmdlet\\Get-Cowsay\\obj\\Release\\GetCowsay.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B574DEE14EDD41EE9B75978E17E64B9B"
