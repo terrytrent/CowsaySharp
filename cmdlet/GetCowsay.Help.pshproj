@@ -366,16 +366,20 @@ If your figlet has special characters, such as the tick(`) character, you must e
       </Examples>
       <RelatedLinks>
         <RelatedLink>
-          <LinkText>https://cowsaysharp.codeplex.com/</LinkText>
-          <LinkUrl />
+          <LinkText>PowerShell Gallery - CowsaySharp</LinkText>
+          <LinkUrl>https://www.powershellgallery.com/packages/CowsaySharp/</LinkUrl>
         </RelatedLink>
         <RelatedLink>
-          <LinkText>https://github.com/terrytrent/CowsaySharp</LinkText>
-          <LinkUrl />
+          <LinkText>CodePlex Project - CowsaySharp</LinkText>
+          <LinkUrl>https://cowsaysharp.codeplex.com/</LinkUrl>
         </RelatedLink>
         <RelatedLink>
-          <LinkText>https://github.com/piuccio/cowsay</LinkText>
-          <LinkUrl />
+          <LinkText>GitHub Project - CowsaySharp</LinkText>
+          <LinkUrl>https://github.com/terrytrent/CowsaySharp</LinkUrl>
+        </RelatedLink>
+        <RelatedLink>
+          <LinkText>GitHub Project - Original Cowsay</LinkText>
+          <LinkUrl>https://github.com/piuccio/cowsay</LinkUrl>
         </RelatedLink>
       </RelatedLinks>
       <SupportInformation ad="false" rsat="false" ps2="false" ps3="false" ps4="false" ps5="true" wxp="false" wv="false" w7="false" w8="false" w81="false" w10="false" w2k3s="false" w2k3e="false" w2k3d="false" w2k8s="false" w2k8e="false" w2k8d="false" w2k8r2s="false" w2k8r2e="false" w2k8r2d="false" w2k12s="false" w2k12d="false" w2k12r2s="false" w2k12r2d="false" />

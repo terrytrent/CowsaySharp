@@ -247,8 +247,7 @@ Get-Cowsay -message $message</dev:code>
 				<maml:para>If you only speicfy the message parameter you will get a cow with a speech bubble 40 characters wide.</maml:para>
 				<maml:para />
 				<maml:para />
-				<maml:para>
-#  _______________________________________
+				<maml:para>#  _______________________________________
 # / Four score and seven years ago our    \
 # | fathers brought forth on this         |
 # | continent, a new nation, conceived in |
@@ -586,16 +585,20 @@ Get-Cowsay -figlet -message $message</dev:code>
 	</command:examples>
 	<maml:relatedLinks>
 		<maml:navigationLink>
-			<maml:linkText>https://cowsaysharp.codeplex.com/</maml:linkText>
-			<maml:uri></maml:uri>
+			<maml:linkText>PowerShell Gallery - CowsaySharp</maml:linkText>
+			<maml:uri>https://www.powershellgallery.com/packages/CowsaySharp/</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
-			<maml:linkText>https://github.com/terrytrent/CowsaySharp</maml:linkText>
-			<maml:uri></maml:uri>
+			<maml:linkText>CodePlex Project - CowsaySharp</maml:linkText>
+			<maml:uri>https://cowsaysharp.codeplex.com/</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
-			<maml:linkText>https://github.com/piuccio/cowsay</maml:linkText>
-			<maml:uri></maml:uri>
+			<maml:linkText>GitHub Project - CowsaySharp</maml:linkText>
+			<maml:uri>https://github.com/terrytrent/CowsaySharp</maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>GitHub Project - Original Cowsay</maml:linkText>
+			<maml:uri>https://github.com/piuccio/cowsay</maml:uri>
 		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
