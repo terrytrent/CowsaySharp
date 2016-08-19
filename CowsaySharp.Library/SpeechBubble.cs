@@ -16,15 +16,15 @@ namespace CowsaySharp.Library
         static public string ReturnSpeechBubble(string message, bool think, int? maxLineLength, bool figlet)
         {
             char[] splitChar = { ' ',(char)10,(char)13 };
-            Bubbles bubbles = new Bubbles();
+            IBubbleChars bubbles;
             List<string> messageAsList = new List<string>();
             if (think)
             {
-                bubbles.SetBubbles(Bubbles.bubbleType.think);
+                bubbles = new ThinkBubbleChars();   
             }
             else
             {
-                bubbles.SetBubbles(Bubbles.bubbleType.say);
+                bubbles = new SayBubbleChars();
             }
 
             if (!maxLineLength.HasValue)
@@ -60,23 +60,23 @@ namespace CowsaySharp.Library
             return new string(character, numberOfUnderscores);
         }
 
-        static string createSmallWordBubble(string message, Bubbles bubbles)
+        static string createSmallWordBubble(string message, IBubbleChars bubbles)
         {
             int lengthOfMessage = message.Length;
             int lengthOfTopAndBottomLinesInBubble = lengthOfMessage + 2;
-            string topBubbleLine = repeatCharacter('_', lengthOfTopAndBottomLinesInBubble);
-            string bottomBubbleLine = repeatCharacter('-', lengthOfTopAndBottomLinesInBubble);
+            string topBubbleLine = repeatCharacter(bubbles.topLine, lengthOfTopAndBottomLinesInBubble);
+            string bottomBubbleLine = repeatCharacter(bubbles.bottomLine, lengthOfTopAndBottomLinesInBubble);
 
             return $" {topBubbleLine} \r\n{bubbles.SmallLeft} {message.Trim()} {bubbles.SmallRight}\r\n {bottomBubbleLine}";
         }
 
-        static string createLargeWordBubble(List<string> list, Bubbles bubbles)
+        static string createLargeWordBubble(List<string> list, IBubbleChars bubbles)
         {
             StringBuilder bubbleBuilder = new StringBuilder();
             int longestLineInList = list.Max(s => s.Length);
             int lengthOfTopAndBottomLinesInBubble = longestLineInList + 2;
-            string topBubbleLine = $" {repeatCharacter('_', lengthOfTopAndBottomLinesInBubble)}";
-            string bottomBubbleLine = $" {repeatCharacter('-', lengthOfTopAndBottomLinesInBubble)}";
+            string topBubbleLine = $" {repeatCharacter(bubbles.topLine, lengthOfTopAndBottomLinesInBubble)}";
+            string bottomBubbleLine = $" {repeatCharacter(bubbles.bottomLine, lengthOfTopAndBottomLinesInBubble)}";
             string firstLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[0].Length + 1);
             string lastLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[list.Count - 1].Length + 1);
 

@@ -64,12 +64,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bubbles.cs" />
+    <Compile Include="BubbleChars.cs" />
     <Compile Include="CowFace.cs" />
     <Compile Include="CowFaces.cs" />
     <Compile Include="GetCow.cs" />
+    <Compile Include="IBubbleChars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SayBubbleChars.cs" />
     <Compile Include="SpeechBubble.cs" />
+    <Compile Include="ThinkBubbleChars.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

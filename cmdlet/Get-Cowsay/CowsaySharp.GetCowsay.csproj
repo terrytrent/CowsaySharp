@@ -69,8 +69,8 @@
     <Compile Include="..\..\CowsaySharp.Common\ValidateFile.cs">
       <Link>CowsaySharp.Common\ValidateFile.cs</Link>
     </Compile>
-    <Compile Include="..\..\CowsaySharp.Library\Bubbles.cs">
-      <Link>CowsaySharp.Library\Bubbles.cs</Link>
+    <Compile Include="..\..\CowsaySharp.Library\BubbleChars.cs">
+      <Link>CowsaySharp.Library\BubbleChars.cs</Link>
     </Compile>
     <Compile Include="..\..\CowsaySharp.Library\CowFace.cs">
       <Link>CowsaySharp.Library\CowFace.cs</Link>
@@ -81,8 +81,17 @@
     <Compile Include="..\..\CowsaySharp.Library\GetCow.cs">
       <Link>CowsaySharp.Library\GetCow.cs</Link>
     </Compile>
+    <Compile Include="..\..\CowsaySharp.Library\IBubbleChars.cs">
+      <Link>CowsaySharp.Library\IBubbleChars.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Library\SayBubbleChars.cs">
+      <Link>CowsaySharp.Library\SayBubbleChars.cs</Link>
+    </Compile>
     <Compile Include="..\..\CowsaySharp.Library\SpeechBubble.cs">
       <Link>CowsaySharp.Library\SpeechBubble.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Library\ThinkBubbleChars.cs">
+      <Link>CowsaySharp.Library\ThinkBubbleChars.cs</Link>
     </Compile>
     <Compile Include="Cowsay.cs" />
     <Compile Include="GetCowsayCmdlet.cs" />

@@ -12,7 +12,7 @@ namespace CowsaySharp.Library
         static public string ReturnCow(string cowFile, bool think, CowFace face)
         {
             StreamReader sr = new StreamReader(cowFile);
-            Bubbles bubbles = new Bubbles();
+            IBubbleChars bubbles;
             cow = new StringBuilder(sr.ReadToEnd().ToString());
             bool threeEyes = false;
             if (cow.ToString().Contains("($extra x 2)"))
@@ -22,11 +22,11 @@ namespace CowsaySharp.Library
 
             if (think)
             {
-                bubbles.SetBubbles(Bubbles.bubbleType.think);
+                bubbles = new ThinkBubbleChars();
             }
             else
             {
-                bubbles.SetBubbles(Bubbles.bubbleType.say);
+                bubbles = new SayBubbleChars();
             }
 
             cow.Replace("\\\\", "\\");
