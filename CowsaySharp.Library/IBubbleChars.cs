@@ -1,5 +1,8 @@
 ﻿namespace CowsaySharp.Library
 {
+    /// <summary>
+    /// Characters that will be used to generate the Speech Bubble
+    /// </summary>
     public interface IBubbleChars
     {
         char topLine { get; }
