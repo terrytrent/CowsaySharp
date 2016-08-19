@@ -22,7 +22,12 @@ namespace CowsaySharp.ConsoleLibrary
                 throw new ArgumentException("Cow Files Path is not valid or not accessible", cowFilesDirectory);
             }
 
-            string[] cowfiles = Directory.GetFiles(cowFilesDirectory, cowSearchPattern);
+            IList<string> cowfiles = Directory.GetFiles(cowFilesDirectory, cowSearchPattern);
+            for (int i = 0; i < cowfiles.Count; i++)
+            {
+                string cowfile = Path.GetFileNameWithoutExtension(cowfiles[i]);
+                cowfiles[i] = cowfile;
+            }
 
             Console.WriteLine($"Cow files in {cowFilesDirectory}:");
 
@@ -32,66 +37,30 @@ namespace CowsaySharp.ConsoleLibrary
                 listInBunch(cowfiles);
         }
 
-        static private void listInBunch(string[] cowfiles)
+        static private void listInBunch(IList<string> cowfiles)
         {
             StringBuilder bunchBuilder = new StringBuilder();
-            List<string> cowFilesList = StringArrayOfFilesToList.GetList(cowfiles);
-            foreach (string file in cowFilesList)
+            foreach (string file in cowfiles)
             {
                 bunchBuilder.Append($"{file} ");
             }
 
             Console.WriteLine(bunchBuilder.ToString().Trim());
         }
-
-        static private void listInList(string[] cowfiles)
+        
+        static private void listInColumnsDown(IList<string> cowfiles)
         {
-            List<string> cowFilesList = StringArrayOfFilesToList.GetList(cowfiles);
-            foreach(string file in cowFilesList)
-            {
-                Console.WriteLine(file);
-            }
-        }
-
-        static private void listInColumnsAcross(string[] cowfiles)
-        {
-            List<string> cowFilesList =  StringArrayOfFilesToList.GetList(cowfiles);
-            var columnSize = (short)cowFilesList.Max(s => s.Length) + 2;
-
-            for (int i = 0; i < cowFilesList.Count; i++)
-            {
-                string firstColumn;
-                string secondColumn;
-                string thirdColumn;
-
-                if(!String.IsNullOrEmpty(cowFilesList[i]))
-                    firstColumn = cowFilesList[i];
-                if (!String.IsNullOrEmpty(cowFilesList[i+1]))
-                    secondColumn = cowFilesList[i+1];
-                if (!String.IsNullOrEmpty(cowFilesList[i+2]))
-                    thirdColumn = cowFilesList[i+2];
-
-                string columns = String.Format($"{{0,-{columnSize}}}{{1,-{columnSize}}}{{2,-{columnSize}}}", cowFilesList[i], cowFilesList[i + 1], cowFilesList[i + 2]);
-
-                i = i + 3;
-                Console.WriteLine(columns);
-            }
-        }
-
-        static private void listInColumnsDown(string[] cowfiles)
-        {
-            List<string> cowFilesList =  StringArrayOfFilesToList.GetList(cowfiles);
             List<string> returnList = new List<string>();
             StringBuilder fullList = new StringBuilder();
             const int numberOfColumns = 3;
-            int columnSize = (short)cowFilesList.Max(s => s.Length) + 2;
-            int numberOfFiles = cowFilesList.Count;
+            int columnSize = (short)cowfiles.Max(s => s.Length) + 2;
+            int numberOfFiles = cowfiles.Count;
             int numberOfLines = ((numberOfFiles - (numberOfFiles % numberOfColumns)) / numberOfColumns) + 1;
 
             for (int currentIndexOfFile = 0,currentRowOfColulmn = 0,currentColumn = 0; currentColumn < numberOfColumns && currentIndexOfFile < numberOfFiles; currentIndexOfFile++,currentRowOfColulmn++)
 {
                 StringBuilder sb = new StringBuilder();
-                string file = cowFilesList[currentIndexOfFile];
+                string file = cowfiles[currentIndexOfFile];
                 string toAppend = String.Format($"{{0,-{columnSize}}}", file);
 
                 if (currentColumn == 0)
