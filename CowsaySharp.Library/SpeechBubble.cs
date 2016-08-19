@@ -64,8 +64,8 @@ namespace CowsaySharp.Library
         {
             int lengthOfMessage = message.Length;
             int lengthOfTopAndBottomLinesInBubble = lengthOfMessage + 2;
-            string topBubbleLine = repeatCharacter(bubbles.topLine, lengthOfTopAndBottomLinesInBubble);
-            string bottomBubbleLine = repeatCharacter(bubbles.bottomLine, lengthOfTopAndBottomLinesInBubble);
+            string topBubbleLine = repeatCharacter(bubbles.TopLine, lengthOfTopAndBottomLinesInBubble);
+            string bottomBubbleLine = repeatCharacter(bubbles.BottomLine, lengthOfTopAndBottomLinesInBubble);
 
             return $" {topBubbleLine} \r\n{bubbles.SmallLeft} {message.Trim()} {bubbles.SmallRight}\r\n {bottomBubbleLine}";
         }
@@ -75,8 +75,8 @@ namespace CowsaySharp.Library
             StringBuilder bubbleBuilder = new StringBuilder();
             int longestLineInList = list.Max(s => s.Length);
             int lengthOfTopAndBottomLinesInBubble = longestLineInList + 2;
-            string topBubbleLine = $" {repeatCharacter(bubbles.topLine, lengthOfTopAndBottomLinesInBubble)}";
-            string bottomBubbleLine = $" {repeatCharacter(bubbles.bottomLine, lengthOfTopAndBottomLinesInBubble)}";
+            string topBubbleLine = $" {repeatCharacter(bubbles.TopLine, lengthOfTopAndBottomLinesInBubble)}";
+            string bottomBubbleLine = $" {repeatCharacter(bubbles.BottomLine, lengthOfTopAndBottomLinesInBubble)}";
             string firstLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[0].Length + 1);
             string lastLineInMessageSpaces = repeatCharacter(' ', longestLineInList - list[list.Count - 1].Length + 1);
 

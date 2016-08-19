@@ -2,8 +2,8 @@
 {
     class BubbleChars : IBubbleChars
     {
-        public char topLine { get; set; }
-        public char bottomLine { get; set; }
+        public char TopLine { get; set; }
+        public char BottomLine { get; set; }
         public string UpLeft { get; set; }
         public string UpRight { get; set; }
         public string DownLeft { get; set; }
@@ -16,8 +16,8 @@
 
         public BubbleChars()
         {
-            topLine = '_';
-            bottomLine = '-';
+            TopLine = '_';
+            BottomLine = '-';
         }
     }
 }

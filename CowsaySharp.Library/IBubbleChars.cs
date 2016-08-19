@@ -5,8 +5,8 @@
     /// </summary>
     public interface IBubbleChars
     {
-        char topLine { get; }
-        char bottomLine { get; }
+        char TopLine { get; }
+        char BottomLine { get; }
         string UpLeft { get; }
         string UpRight { get; }
         string DownLeft { get; }
