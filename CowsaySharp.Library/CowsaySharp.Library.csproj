@@ -70,9 +70,7 @@
     <Compile Include="GetCow.cs" />
     <Compile Include="IBubbleChars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SayBubbleChars.cs" />
     <Compile Include="SpeechBubble.cs" />
-    <Compile Include="ThinkBubbleChars.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

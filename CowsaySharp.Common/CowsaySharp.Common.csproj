@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SayBubbleChars.cs" />
-    <Compile Include="StringArrayOfFilesToList.cs" />
     <Compile Include="ThinkBubbleChars.cs" />
     <Compile Include="ValidateDirectory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
