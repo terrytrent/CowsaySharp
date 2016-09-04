@@ -7,7 +7,7 @@ namespace CowsaySharp.ConsoleLibrary
 {
     static public class Switches
     {
-        static public void processSwitches(string[] args, string programDir, bool think)
+        static public void processSwitches(string[] args, string programDir, IBubbleChars BubbleChars)
         {
             bool breakOut = false;
             bool cowProcessing = false;
@@ -217,8 +217,8 @@ namespace CowsaySharp.ConsoleLibrary
                     else
                         messageAsString = message.ToString().Trim();
 
-                    string SpeechBubbleReturned = SpeechBubble.ReturnSpeechBubble(messageAsString, think, columnSize, isFiglet);
-                    string CowReturned = GetCow.ReturnCow(cowSpecified, think, face);
+                    string SpeechBubbleReturned = SpeechBubble.ReturnSpeechBubble(messageAsString, BubbleChars, columnSize, isFiglet);
+                    string CowReturned = GetCow.ReturnCow(cowSpecified, BubbleChars, face);
 
                     Console.WriteLine(SpeechBubbleReturned + Environment.NewLine + CowReturned);
                 }

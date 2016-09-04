@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Reflection;
+using CowsaySharp.Library;
 using CowsaySharp.ConsoleLibrary;
 
 namespace CowsaySharp.Say
@@ -10,10 +11,10 @@ namespace CowsaySharp.Say
 
         static void Main(string[] args)
         {
-            const bool think = false;
+            IBubbleChars bubbleChars = new SayBubbleChars();
             strAppDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            Switches.processSwitches(args, strAppDir, think);
+            Switches.processSwitches(args, strAppDir, bubbleChars);
         }
     }
 }

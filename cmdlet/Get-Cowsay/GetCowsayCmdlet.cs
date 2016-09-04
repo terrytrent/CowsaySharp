@@ -57,6 +57,7 @@ namespace CowsaySharp.GetCowsay
         [Parameter(ValueFromPipeline = true,Position = 0)]
         public string message { get; set; }
 
+        IBubbleChars bubbleChars;
         private int _wrapcolumn = 40;
         string moduleDirectory;
         string cowFileLocation;
@@ -126,6 +127,15 @@ namespace CowsaySharp.GetCowsay
 
             if (wrapcolumn < 10 | wrapcolumn > 76)
                 ThrowTerminatingError(new ErrorRecord(new ArgumentOutOfRangeException(nameof(wrapcolumn), "Cannot specify a size smaller than 10 characters or larger than 76 characters"), "E1", ErrorCategory.LimitsExceeded, this));
+
+            if (think)
+            {
+                bubbleChars = new ThinkBubbleChars();
+            }
+            else
+            {
+                bubbleChars = new SayBubbleChars();
+            }
         }
 
         protected override void ProcessRecord()
@@ -147,8 +157,8 @@ namespace CowsaySharp.GetCowsay
 
         private Cowsay BuildCowsay()
         {
-            string SpeechBubbleReturned = SpeechBubble.ReturnSpeechBubble(message, think, wrapcolumn, figlet);
-            string CowReturned = GetCow.ReturnCow(cowSpecified, think, face);
+            string SpeechBubbleReturned = SpeechBubble.ReturnSpeechBubble(message, bubbleChars, wrapcolumn, figlet);
+            string CowReturned = GetCow.ReturnCow(cowSpecified, bubbleChars, face);
             return new Cowsay(CowReturned, SpeechBubbleReturned);
         }
 

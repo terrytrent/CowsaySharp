@@ -9,25 +9,15 @@ namespace CowsaySharp.Library
     {
         static private StringBuilder cow;
 
-        static public string ReturnCow(string cowFile, bool think, CowFace face)
+        static public string ReturnCow(string cowFile, IBubbleChars bubbles, CowFace face)
         {
             StreamReader sr = new StreamReader(cowFile);
-            IBubbleChars bubbles;
             cow = new StringBuilder(sr.ReadToEnd().ToString());
             bool threeEyes = false;
             if (cow.ToString().Contains("($extra x 2)"))
                 threeEyes = true;
 
             cow = removeExtraCowLines(cow);
-
-            if (think)
-            {
-                bubbles = new ThinkBubbleChars();
-            }
-            else
-            {
-                bubbles = new SayBubbleChars();
-            }
 
             cow.Replace("\\\\", "\\");
 

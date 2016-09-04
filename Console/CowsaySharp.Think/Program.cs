@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Reflection;
+using CowsaySharp.Library;
 using CowsaySharp.ConsoleLibrary;
 
 namespace CowsaySharp.Think
@@ -7,13 +8,13 @@ namespace CowsaySharp.Think
     class Program
     {
         static public string strAppDir;
-
+        
         static void Main(string[] args)
         {
-            const bool think = true;
+            IBubbleChars bubbleChars = new ThinkBubbleChars();
             strAppDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            Switches.processSwitches(args, strAppDir, think);
+            Switches.processSwitches(args, strAppDir, bubbleChars);
         }
     }
 }

@@ -70,6 +70,9 @@
     <Compile Include="..\..\cowsaysharp.common\StringArrayOfFilesToList.cs">
       <Link>CowsaySharp.Common\StringArrayOfFilesToList.cs</Link>
     </Compile>
+    <Compile Include="..\..\CowsaySharp.Common\ThinkBubbleChars.cs">
+      <Link>CowsaySharp.Common\ThinkBubbleChars.cs</Link>
+    </Compile>
     <Compile Include="..\..\cowsaysharp.common\ValidateDirectory.cs">
       <Link>CowsaySharp.Common\ValidateDirectory.cs</Link>
     </Compile>
@@ -305,6 +308,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CowsaySharp.Common\CowsaySharp.Common.csproj">
+      <Project>{6d729d6a-27f3-4a1a-bb97-91d10e864cf6}</Project>
+      <Name>CowsaySharp.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

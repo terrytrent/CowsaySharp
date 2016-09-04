@@ -60,8 +60,14 @@
     <Compile Include="..\..\Console\CowsaySharp.ConsoleLibrary\TestCowFile.cs">
       <Link>CowsaySharp.ConsoleLibrary\TestCowFile.cs</Link>
     </Compile>
+    <Compile Include="..\..\CowsaySharp.Common\SayBubbleChars.cs">
+      <Link>CowsaySharp.Common\SayBubbleChars.cs</Link>
+    </Compile>
     <Compile Include="..\..\CowsaySharp.Common\StringArrayOfFilesToList.cs">
       <Link>CowsaySharp.Common\StringArrayOfFilesToList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CowsaySharp.Common\ThinkBubbleChars.cs">
+      <Link>CowsaySharp.Common\ThinkBubbleChars.cs</Link>
     </Compile>
     <Compile Include="..\..\CowsaySharp.Common\ValidateDirectory.cs">
       <Link>CowsaySharp.Common\ValidateDirectory.cs</Link>

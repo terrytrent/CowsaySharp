@@ -114,6 +114,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\CowsaySharp.Common\SayBubbleChars.cs">
+      <Link>CowsaySharp.Common\SayBubbleChars.cs</Link>
+    </Compile>
     <Compile Include="..\..\CowsaySharp.Common\StringArrayOfFilesToList.cs">
       <Link>CowsaySharp.Common\StringArrayOfFilesToList.cs</Link>
     </Compile>

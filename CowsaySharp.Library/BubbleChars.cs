@@ -1,6 +1,6 @@
 ﻿namespace CowsaySharp.Library
 {
-    class BubbleChars : IBubbleChars
+    public class BubbleChars : IBubbleChars
     {
         public char TopLine { get; set; }
         public char BottomLine { get; set; }

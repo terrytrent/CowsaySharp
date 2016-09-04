@@ -7,25 +7,10 @@ namespace CowsaySharp.Library
 {
     static public class SpeechBubble
     {
-        
-        static public string ReturnSpeechBubble(string message)
-        {
-            return ReturnSpeechBubble(message, false, null, false);
-        }
-
-        static public string ReturnSpeechBubble(string message, bool think, int? maxLineLength, bool figlet)
+        static public string ReturnSpeechBubble(string message, IBubbleChars bubbles, int? maxLineLength, bool figlet)
         {
             char[] splitChar = { ' ',(char)10,(char)13 };
-            IBubbleChars bubbles;
             List<string> messageAsList = new List<string>();
-            if (think)
-            {
-                bubbles = new ThinkBubbleChars();   
-            }
-            else
-            {
-                bubbles = new SayBubbleChars();
-            }
 
             if (!maxLineLength.HasValue)
             {
