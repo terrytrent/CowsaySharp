@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ModuleObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fVersion="1.1" type="Binary" mclass="External" useSupports="true">
+<ModuleObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fVersion="1.1" type="Binary" mclass="External" useSupports="false">
   <Name>GetCowsay</Name>
   <Version>1.0</Version>
   <Description>Generates ASCII pictures of a cow with a message</Description>
@@ -8,12 +8,12 @@
     <ProviderName>CodePlex</ProviderName>
     <ProviderURL>https://www.codeplex.com/site/metaweblog</ProviderURL>
     <Blog>
-      <blogid>CowsaySharpCmdlet</blogid>
-      <blogName>CowsaySharp.Cmdlet</blogName>
-      <url>https://cowsaysharpcmdlet.codeplex.com/</url>
+      <blogid>CowsaySharp</blogid>
+      <blogName>CowsaySharp</blogName>
+      <url>https://cowsaysharp.codeplex.com/</url>
     </Blog>
     <UserName>TerryTrent</UserName>
-    <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMq1OC6bkuU6DLity2qxmYgAAAAACAAAAAAADZgAAwAAAABAAAACgV4jXyK44pN6m+ZIrmUVQAAAAAASAAACgAAAAEAAAAGdkNbNW7j9MkP3Po6vCdrsgAAAA/epkdQD6Qtw+QDK/QwKLfmuZlcuWrkYO8ivW0KKsGu4UAAAA5r1Qv0tmC4QoBiVovStjy0tVH70=</Password>
+    <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1X7uo5c66UGAIDhE/4JhrwAAAAACAAAAAAAQZgAAAAEAACAAAAAa48CHImMIeevf1pvYtORTCOyKLHWlb5K+x2YcCema/gAAAAAOgAAAAAIAACAAAADYqHx1b/rU7nL03J3JhVxzKdSN+57zWpoSIKJz2UOg3yAAAAAYKCgHeErBYSy9Bvd/q0k7AMyghJoAolJMs3C6GD1zl0AAAAAg8BqZQl+uq4fIK7C+ByzmFMoK0AvUF6WtkgK6Qb5GGGIofD+qzZYrYV1RFn5yyw4tVb4SvKH+kXh7FeOs3UtE</Password>
     <FetchPostCount>50</FetchPostCount>
   </Provider>
   <OverridePostCount>false</OverridePostCount>
@@ -28,10 +28,10 @@
         <Synopsis>This cmdlet generates ASCII pictures of a cow with a message.</Synopsis>
         <Description />
         <Notes />
-        <InputType>String</InputType>
+        <InputType>string</InputType>
         <InputUrl />
         <InputTypeDescription />
-        <ReturnType>String</ReturnType>
+        <ReturnType>CowsaySharp.GetCowsay.Containers.Cowsay</ReturnType>
         <ReturnUrl />
         <ReturnTypeDescription />
       </GeneralHelp>
@@ -384,7 +384,7 @@ If your figlet has special characters, such as the tick(`) character, you must e
       </RelatedLinks>
       <SupportInformation ad="false" rsat="false" ps2="false" ps3="false" ps4="false" ps5="true" wxp="false" wv="false" w7="false" w8="false" w81="false" w10="false" w2k3s="false" w2k3e="false" w2k3d="false" w2k8s="false" w2k8e="false" w2k8d="false" w2k8r2s="false" w2k8r2e="false" w2k8r2d="false" w2k12s="false" w2k12d="false" w2k12r2s="false" w2k12r2d="false" />
       <Publish>true</Publish>
-      <URL>https://cowsaysharpcmdlet.codeplex.com/wikipage?title=Get-Cowsay</URL>
+      <URL>https://cowsaysharp.codeplex.com/wikipage?title=Get-Cowsay</URL>
       <ArticleIDString>704687</ArticleIDString>
     </CmdletObject>
   </Cmdlets>
